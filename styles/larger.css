@@ -1,110 +1,239 @@
 @media (min-width: 600px) {
 
+    /* Body */
     body {
         font-family: 'Arimo', sans-serif;
-        line-height: 1.6;
+        line-height: 1.5;
         margin: 0 auto;
         max-width: 1200px;
         padding: 0 20px;
-        background-color: #FFFFFF;
+        background-color: #F5F5F7; /* Light gray background for the page */
         color: #000000;
     }
 
+    /* Header */
     header {
         display: flex;
         align-items: center;
-        padding: 1.5rem 0;
-        border-bottom: 2px solid #44BAC9;
+        padding: 1.5rem 0; /* Adjusted padding to be consistent with no specific background */
+        border-bottom: 2px solid #ccc; 
         margin-bottom: 1.5rem;
-        background-color: #B8E4EB;
+        background-color: #ffffff; 
         color: #000000;
     }
 
     header img {
         margin-right: 20px;
-        border-radius: 50%;
-        border: 3px solid #44BAC9;
+        border-radius: 5%;
+        border: 3px solid #ccc;
     }
 
     header span {
         font-size: 2em;
         font-weight: bold;
         color: #000000;
+        ;
     }
 
+    /* Navigation */
+    nav {
+        margin-bottom: 1.5rem; /* Added margin for spacing */
+    }
+    
     nav ul {
         list-style-type: none;
         padding: 0;
-        margin: 0 0 1.5rem 0;
+        margin: 0; /* Removed bottom margin as nav itself has it now */
         display: flex;
         justify-content: space-around;
-        background-color: #98D5DF;
+        background-color: #ffffff;
         border-radius: 5px;
-        border: 1px solid #44BAC9;
+        border: 1px solid #ccc;
     }
 
     nav ul li a {
         display: block;
-        color: #000000;
+        color: #333336;
         text-align: center;
         padding: 16px 22px;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: normal;
+        font-size: large;
         transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:visited {
+        color: #0066CC;
     }
 
     nav ul li a:hover,
     nav ul li a:focus {
-        background-color: #44BAC9;
+        background-color: transparent;
         color: #000000;
+        text-decoration: underline;
+        font-weight: bold;
         border-radius: 4px;
     }
 
     nav ul li a.active {
-        background-color: #44BAC9;
+        background-color: #f0f4f8;
         color: #000000;
         font-weight: bold;
-        border-bottom: 2px solid #268F9E;
+        border-bottom: 2px solid #000000;
+        text-decoration: none;
     }
 
+    /* Main Area */
     main {
         padding: 1rem 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
+        /* Grid properties removed from main */
     }
 
     main h1 {
         font-size: 2.8em;
-        color: #268F9E;
+        color: #000000;
         text-align: center;
         margin-bottom: 1.5rem;
-        grid-column: 1 / -1;
     }
 
-    section {
-        background-color: #f8f8f8;
-        padding: 2rem;
-        border: 1px solid #98D5DF;
-        border-radius: 8px;
-        box-shadow: 3px 3px 8px rgba(0,0,0,0.05);
+    /* Layout Grid */
+    .two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Or use a ratio like 2fr 1fr if desired */
+        gap: 25px; 
+        margin-bottom: 1.5rem; 
     }
 
-    section h2 {
-        font-size: 2em;
-        color: #35A4B3;
-        border-bottom: 1px solid #B8E4EB;
+    /* Cards */
+    .card {
+        background-color: #ffffff;
+        border-radius: 8px; /* Matched from earlier section style */
+        padding: 1.5rem; /* Adjusted padding */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Default subtle shadow for cards */
+    }
+
+    .card .card-header {
         padding-bottom: 0.75rem;
-        margin-top: 0;
         margin-bottom: 1rem;
+        border-bottom: 1px solid #eee; /* Light border for card headers */
     }
 
+    .card .card-header h2 {
+        margin: 0;
+        color: #000000;
+        font-size: 1.75em; /* Slightly adjusted for card context */
+    }
+    
+    .card .card-content {
+        /* Styles for generic card content area if needed */
+        font-size: 1em; /* Base size for card content */
+    }
+
+    .card .card-content ul {
+        list-style-position: inside; /* Example if bullets are desired inside padding */
+        padding-left: 0; /* Reset default padding if using custom list styling */
+    }
+
+    .card .card-content li {
+        margin-bottom: 0.5em; /* Spacing for list items */
+    }
+    
+    .image-card .card-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px; /* Optional: slight rounding for images in cards */
+    }
+
+    /* Course Info Section */
+    .course-information-card {
+        width: 100%; 
+        margin-top: 1.5rem; /* Space above this full-width card */
+    }
+
+    .filter-controls {
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .filter-btn {
+        padding: 0.5em 1em;
+        border: 1px solid #ccc;
+        background-color: #F5F5F7;
+        color: #333336;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: 'Arimo', sans-serif;
+        font-size: 0.9em;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .filter-btn:hover {
+        background-color: #e0e0e0;
+        border-color: #bbb;
+    }
+
+    .filter-btn.active {
+        background-color: #333336;
+        color: #ffffff;
+        border-color: #333336;
+        font-weight: bold;
+    }
+
+    .course-list {
+        list-style-type: none;
+        padding: 0;
+        margin-left:  250px;
+        margin-right: 250px;
+        margin-bottom: 1.5rem;
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Example: responsive grid */
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .course-item {
+        padding: 1rem;
+        background-color: #ffffff; /* Default for current (no fill) or completed */
+        transition: box-shadow 0.3s ease;
+        border-radius: 4px; /* Consistent rounding */
+        text-align: center;
+    }
+
+    .course-item strong {
+        display: block;
+        margin-bottom: 0.25em;
+        color: #000000;
+    }
+
+    .course-item  {
+        font-size: 0.85em;
+        color: #555555; /* Slightly lighter text for term */
+    }
+
+    .completed-course {
+        border: 2px solid #0066CC; /* Blue border from palette */
+        /* background-color: #ffffff; /* Explicitly white, or remove if .course-item handles */
+    }
+
+    .current-course {
+        border: 2px solid #27AE60; /* Solid green border */
+        background-color: transparent; /* No fill */
+    }
+
+    .course-item:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow on hover */
+    }
+
+    /* Footer */
     footer {
         text-align: center;
         padding: 2.5rem 0;
         margin-top: 2.5rem;
-        border-top: 2px solid #44BAC9;
-        background-color: #B8E4EB;
+        border-top: 2px solid #eee;
+        background-color: #ffffff;
         color: #000000;
     }
 
@@ -113,14 +242,15 @@
     }
     
     footer a {
-        color: #35A4B3;
+        color: #333336; /* Using a standard text link color */
         text-decoration: underline;
     }
 
     footer a:hover {
-        color: #268F9E;
+        color: #000000;
     }
 
+    /* Images */
     img.responsive {
         max-width: 100%;
         height: auto;

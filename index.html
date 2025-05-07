@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Course Portal</title> <meta name="description" content="A portal page for course assignments and projects.">
-    <meta name="author" content="[Your Name Here]"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="author" content="Sadler N. Kyne"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
@@ -16,8 +16,8 @@
     </head>
 <body>
     <header>
-        <img src="images/placeholder-profile.jpg" alt="A small photo of [Your Name Here]" width="80" height="80">
-        <span>[Your Name Here]</span>
+        <img src="images/ouray_flight_april25.webp" alt="A small photo of Sadler N. Kyne" width="80" height="80">
+        <span>Sadler N. Kyne</span>
         <button id="menuButton" aria-label="Toggle Menu">☰</button>
     </header>
 
@@ -26,33 +26,78 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber/">Chamber</a></li>
             <li><a href="final/">Final</a></li>
-            <li><a href="https://github.com/[your-github-username]">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/[your-linkedin-profile]" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/SadlerKyne">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/SadlerKyne" target="_blank">LinkedIn</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Home</h1>
 
-        <section>
-            <h2>Learning Activities</h2>
-            <p>Details about various learning activities throughout the course.</p>
-        </section>
+        <div class="two-column-grid"> 
+            <section class="card course-work-card">
+                <div class="card-header">
+                    <h2>Course Work</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>W01 Assignment: Course Home Page</li>
+                        <li>W02 Assignment: Chamber Directory Page</li>
+                        <li>W03 Assignment: Chamber Home Page</li>
+                        <li>W04 Assignment: Chamber Join Page</li>
+                        <li>W05 Assignment: Chamber Discover Page</li>
+                        <li>W06 Project: Completion</li>
+                        <li>W07 Final Exam</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section>
-            <h2>Projects</h2>
-            <p>Information regarding the main projects for this course.</p>
-        </section>
-
-        <section>
-            <h2>Course Information</h2>
-            <p>Key details and resources related to the course structure and expectations.</p>
+            <section class="card image-card">
+                <div class="card-header">
+                    <h2>Moab, Utah</h2>
+                </div>
+                <div class="card-content">
+                    <img src="images/canyonlands_april25.webp" alt="Photo of Canyonlands National Park Taken Arpil 17, 2025 during EJS on DJI Mavic 3">
+                </div>
+            </section>
+        </div> <section class="card course-information-card">
+            <div class="card-header">
+                <h2>Course Information</h2> 
+            </div>
+            <div class="filter-controls"> 
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="rel">REL</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+            <div class="card-content">
+                <ul class="course-list">
+                    <li class="course-item completed-course" data-category="cse">
+                        <strong>CSE111.005</strong>
+                    </li>
+                    <li class="course-item completed-course" data-category="wdd">
+                        <strong>WDD130.003</strong>
+                    </li>
+                    <li class="course-item current-course" data-category="cse">
+                        <strong>CSE210.005</strong>
+                    </li>
+                    <li class="course-item current-course" data-category="rel">
+                        <strong>REL275A.081</strong>
+                    </li>
+                    <li class="course-item current-course" data-category="wdd">
+                        <strong>WDD131.002</strong>
+                    </li>
+                    <li class="course-item current-course" data-category="wdd">
+                        <strong>WDD231.006</strong>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>
-            &copy;<span id="currentYear"></span> [Your Name Here] - [Your State or Country]
+            &copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America
         </p>
         <p id="lastModified">
             </p>
