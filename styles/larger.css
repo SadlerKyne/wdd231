@@ -4,27 +4,39 @@
     body {
         font-family: 'Arimo', sans-serif;
         line-height: 1.5;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 0 20px;
-        background-color: #F5F5F7; /* Light gray background for the page */
+        margin: 0;
+        background-color: #F5F5F7;
         color: #000000;
+    }
+
+    /* Content Wrapper */
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     /* Header */
     header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #ccc;
+        padding: 1rem 0;
+    }
+
+    header .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-top-content {
         display: flex;
         align-items: center;
-        padding: 1.5rem 0; /* Adjusted padding to be consistent with no specific background */
-        border-bottom: 2px solid #ccc; 
-        margin-bottom: 1.5rem;
-        background-color: #ffffff; 
-        color: #000000;
     }
 
     header img {
         margin-right: 20px;
-        border-radius: 5%;
+        border-radius: 2%;
         border: 3px solid #ccc;
     }
 
@@ -32,30 +44,43 @@
         font-size: 2em;
         font-weight: bold;
         color: #000000;
-        ;
     }
 
-    /* Navigation */
-    nav {
-        margin-bottom: 1.5rem; /* Added margin for spacing */
+    #menuButton {
+        display: none !important;
     }
-    
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0; /* Removed bottom margin as nav itself has it now */
-        display: flex;
-        justify-content: space-around;
+
+    /* Nav */
+    nav {
         background-color: #ffffff;
-        border-radius: 5px;
-        border: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    nav .content-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul, nav ul.hide-menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0.5em 1em;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        max-width: fit-content;
+        position: static;
+        height: auto;
     }
 
     nav ul li a {
         display: block;
         color: #333336;
         text-align: center;
-        padding: 16px 22px;
+        padding: 12px 18px;
         text-decoration: none;
         font-weight: normal;
         font-size: large;
@@ -72,7 +97,6 @@
         color: #000000;
         text-decoration: underline;
         font-weight: bold;
-        border-radius: 4px;
     }
 
     nav ul li a.active {
@@ -81,73 +105,86 @@
         font-weight: bold;
         border-bottom: 2px solid #000000;
         text-decoration: none;
+        border-radius: 4px;
     }
 
-    /* Main Area */
+    /* Main */
     main {
-        padding: 1rem 0;
-        /* Grid properties removed from main */
+         padding: 1.5rem 0;
     }
 
     main h1 {
         font-size: 2.8em;
         color: #000000;
         text-align: center;
+        margin-top: 0;
         margin-bottom: 1.5rem;
     }
 
-    /* Layout Grid */
+    /* Two Column Grid */
     .two-column-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Or use a ratio like 2fr 1fr if desired */
-        gap: 25px; 
-        margin-bottom: 1.5rem; 
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 1.5rem;
     }
 
-    /* Cards */
-    .card {
-        background-color: #ffffff;
-        border-radius: 8px; /* Matched from earlier section style */
-        padding: 1.5rem; /* Adjusted padding */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Default subtle shadow for cards */
-    }
+/* Cards */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0; /* Explicitly set padding to 0 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; /* Helps contain elements and clip to border-radius */
+}
 
-    .card .card-header {
-        padding-bottom: 0.75rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #eee; /* Light border for card headers */
-    }
-
-    .card .card-header h2 {
-        margin: 0;
-        color: #000000;
-        font-size: 1.75em; /* Slightly adjusted for card context */
-    }
+.card .card-header {
+    background-color: #333336; 
+    color: #ffffff;             
+    padding: 1rem 1.5rem;     /* Padding remains inside the header */
+    margin: 0;                /* ADD THIS: Ensure no margin on the header div itself */
     
-    .card .card-content {
-        /* Styles for generic card content area if needed */
-        font-size: 1em; /* Base size for card content */
+    /* Match card's top border radius */
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+    /* Ensure bottom corners aren't rounded if they shouldn't be */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+}
+
+.card .card-header h2 {
+    margin: 0;                /* ADD THIS: Crucial - Removes default browser margin from H2 */
+    color: #ffffff;             
+    font-size: 1.75em;
+    /* Add line-height if needed for vertical alignment within padding */
+    /* line-height: 1.2; */ /* Example */
+}
+
+/* Card Content */
+.card .card-content {
+    padding: 1.5rem; /* Keep padding for the content area below */
+}
+    /* Course Work */
+    .course-work-card .card-content ul { /* Specific to course work card list if needed */
+        list-style-position: inside;
+        padding-left: 0;
     }
 
-    .card .card-content ul {
-        list-style-position: inside; /* Example if bullets are desired inside padding */
-        padding-left: 0; /* Reset default padding if using custom list styling */
+    .course-work-card .card-content li { /* Specific to course work card list items */
+        margin-bottom: 0.5em;
     }
 
-    .card .card-content li {
-        margin-bottom: 0.5em; /* Spacing for list items */
-    }
-    
+    /* Image Card */
     .image-card .card-content img {
         width: 100%;
         height: auto;
-        border-radius: 4px; /* Optional: slight rounding for images in cards */
+        border-radius: 4px;
     }
 
-    /* Course Info Section */
+    /* Course Information */
     .course-information-card {
-        width: 100%; 
-        margin-top: 1.5rem; /* Space above this full-width card */
+        width: 100%;
     }
 
     .filter-controls {
@@ -155,7 +192,10 @@
         display: flex;
         gap: 0.5rem;
         flex-wrap: wrap;
-        justify-content: center; 
+        justify-content: center;
+        padding-top: 20px;
+        border-bottom: #000000 2px solid;
+        padding-bottom: 20px;
     }
 
     .filter-btn {
@@ -185,21 +225,20 @@
     .course-list {
         list-style-type: none;
         padding: 0;
-        margin-left:  250px;
-        margin-right: 250px;
-        margin-bottom: 1.5rem;
-        display: grid; 
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Example: responsive grid */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1rem;
         justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .course-item {
         padding: 1rem;
-        background-color: #ffffff; /* Default for current (no fill) or completed */
         transition: box-shadow 0.3s ease;
-        border-radius: 4px; /* Consistent rounding */
+        border-radius: 4px;
         text-align: center;
+        
     }
 
     .course-item strong {
@@ -208,52 +247,39 @@
         color: #000000;
     }
 
-    .course-item  {
-        font-size: 0.85em;
-        color: #555555; /* Slightly lighter text for term */
-    }
-
     .completed-course {
-        border: 2px solid #0066CC; /* Blue border from palette */
-        /* background-color: #ffffff; /* Explicitly white, or remove if .course-item handles */
+        border: 2px solid #0066CC;
+        background-color: #ffffff;
     }
 
     .current-course {
-        border: 2px solid #27AE60; /* Solid green border */
-        background-color: transparent; /* No fill */
+        border: 2px solid #27AE60;
+        background-color: transparent;
     }
 
     .course-item:hover {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow on hover */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     /* Footer */
     footer {
-        text-align: center;
-        padding: 2.5rem 0;
-        margin-top: 2.5rem;
-        border-top: 2px solid #eee;
         background-color: #ffffff;
+        border-top: 2px solid #eee;
+        padding: 2.5rem 0;
+        text-align: center;
         color: #000000;
     }
 
     footer p {
         margin: 0.5em 0;
     }
-    
+
     footer a {
-        color: #333336; /* Using a standard text link color */
+        color: #333336;
         text-decoration: underline;
     }
 
     footer a:hover {
         color: #000000;
-    }
-
-    /* Images */
-    img.responsive {
-        max-width: 100%;
-        height: auto;
-        display: block;
     }
 }

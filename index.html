@@ -3,106 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Course Portal</title> <meta name="description" content="A portal page for course assignments and projects.">
-    <meta name="author" content="Sadler N. Kyne"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>My Course Portal</title>
+    <meta name="description" content="A portal page for course assignments and projects.">
+    <meta name="author" content="Sadler N. Kyne">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/normalize.css"> <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" media="(min-width: 600px)" href="styles/larger.css">
 
-
     <script src="js/date.js" defer></script>
-    </head>
+</head>
 <body>
-    <header>
-        <img src="images/ouray_flight_april25.webp" alt="A small photo of Sadler N. Kyne" width="80" height="80">
-        <span>Sadler N. Kyne</span>
-        <button id="menuButton" aria-label="Toggle Menu">☰</button>
+
+    <header> <div class="content-wrapper"> <div class="header-top-content">
+                <img src="images/ouray_flight_april25.webp" alt="A small photo of Sadler N. Kyne" width="80" height="80">
+                <span>Sadler N. Kyne</span>
+            </div>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+        </div>
     </header>
 
-    <nav>
-        <ul class="hide-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chamber/">Chamber</a></li>
-            <li><a href="final/">Final</a></li>
-            <li><a href="https://github.com/SadlerKyne">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/SadlerKyne" target="_blank">LinkedIn</a></li>
-        </ul>
+    <nav> <div class="content-wrapper"> <ul class="hide-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber/">Chamber</a></li>
+                <li><a href="final/">Final</a></li>
+                <li><a href="https://github.com/SadlerKyne">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/SadlerKyne" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <h1>Home</h1>
-
-        <div class="two-column-grid"> 
-            <section class="card course-work-card">
+    <main> <div class="content-wrapper"> <h1>Home</h1>
+            <div class="two-column-grid">
+                <section class="card course-work-card">
+                    <div class="card-header">
+                        <h2>Course Work</h2>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>W01 Assignment: Course Home Page</li>
+                            <li>W02 Assignment: Chamber Directory Page</li>
+                            <li>W03 Assignment: Chamber Home Page</li>
+                            <li>W04 Assignment: Chamber Join Page</li>
+                            <li>W05 Assignment: Chamber Discover Page</li>
+                            <li>W06 Project: Completion</li>
+                            <li>W07 Final Exam</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="card image-card">
+                    <div class="card-header">
+                        <h2>Moab, Utah</h2>
+                    </div>
+                    <div class="card-content">
+                        <img src="images/canyonlands_april25.webp" alt="Photo of Canyonlands National Park Taken Arpil 17, 2025 during EJS on DJI Mavic 3">
+                    </div>
+                </section>
+            </div> <section class="card course-information-card">
                 <div class="card-header">
-                    <h2>Course Work</h2>
+                    <h2>Course Information</h2>
+                </div>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="cse">CSE</button>
+                    <button class="filter-btn" data-filter="rel">REL</button>
+                    <button class="filter-btn" data-filter="wdd">WDD</button>
                 </div>
                 <div class="card-content">
-                    <ul>
-                        <li>W01 Assignment: Course Home Page</li>
-                        <li>W02 Assignment: Chamber Directory Page</li>
-                        <li>W03 Assignment: Chamber Home Page</li>
-                        <li>W04 Assignment: Chamber Join Page</li>
-                        <li>W05 Assignment: Chamber Discover Page</li>
-                        <li>W06 Project: Completion</li>
-                        <li>W07 Final Exam</li>
+                    <ul class="course-list">
+                        <li class="course-item completed-course" data-category="cse"><strong>CSE111.005</strong></li>
+                        <li class="course-item completed-course" data-category="wdd"><strong>WDD130.003</strong></li>
+                        <li class="course-item current-course" data-category="cse"><strong>CSE210.005</strong></li>
+                        <li class="course-item current-course" data-category="rel"><strong>REL275A.081</strong></li>
+                        <li class="course-item current-course" data-category="wdd"><strong>WDD131.002</strong></li>
+                        <li class="course-item current-course" data-category="wdd"><strong>WDD231.006</strong></li>
                     </ul>
                 </div>
             </section>
+        </div> </main>
 
-            <section class="card image-card">
-                <div class="card-header">
-                    <h2>Moab, Utah</h2>
-                </div>
-                <div class="card-content">
-                    <img src="images/canyonlands_april25.webp" alt="Photo of Canyonlands National Park Taken Arpil 17, 2025 during EJS on DJI Mavic 3">
-                </div>
-            </section>
-        </div> <section class="card course-information-card">
-            <div class="card-header">
-                <h2>Course Information</h2> 
-            </div>
-            <div class="filter-controls"> 
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="cse">CSE</button>
-                <button class="filter-btn" data-filter="rel">REL</button>
-                <button class="filter-btn" data-filter="wdd">WDD</button>
-            </div>
-            <div class="card-content">
-                <ul class="course-list">
-                    <li class="course-item completed-course" data-category="cse">
-                        <strong>CSE111.005</strong>
-                    </li>
-                    <li class="course-item completed-course" data-category="wdd">
-                        <strong>WDD130.003</strong>
-                    </li>
-                    <li class="course-item current-course" data-category="cse">
-                        <strong>CSE210.005</strong>
-                    </li>
-                    <li class="course-item current-course" data-category="rel">
-                        <strong>REL275A.081</strong>
-                    </li>
-                    <li class="course-item current-course" data-category="wdd">
-                        <strong>WDD131.002</strong>
-                    </li>
-                    <li class="course-item current-course" data-category="wdd">
-                        <strong>WDD231.006</strong>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            &copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America
-        </p>
-        <p id="lastModified">
+    <footer> <div class="content-wrapper"> <p>
+                &copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America
             </p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
     <script src="js/navigation.js" defer></script>
-</body>
+    </body>
 </html>
