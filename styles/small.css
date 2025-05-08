@@ -1,151 +1,318 @@
-/* Body */
+/* Styles the main page body */
 body {
-    font-family: 'Arimo', sans-serif; /* Corrected */
+    font-family: 'Arimo', sans-serif;
     line-height: 1.5;
     margin: 0;
-    padding: 0 10px;
-    background-color: #FFFFFF;
+    padding: 0;
+    background-color: #f5f5f7;
     color: #000000;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Adds padding to content areas */
+.content-wrapper {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Header */
+/* Styles the main header bar */
 header {
     background-color: #ffffff;
-    color: #000000;
-    padding: 1rem 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     border-bottom: 1px solid #eee;
+    padding: 0.75rem 0;
 }
 
+/* Arranges content inside header */
+header .content-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Styles the header image */
 header img {
-    max-height: 50px;
-    margin-right: 15px;
-    border-radius: 50%;
+    max-height: 45px;
+    max-width: 45px;
+    border-radius: 2%;
     border: 2px solid #ccc;
 }
 
-header span {
-    font-size: 1.5em;
+/* Styles the header name text */
+header .header-name {
+    font-size: 1.1em;
     font-weight: bold;
     color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
-/* Navigation */
-nav {
-    background-color: #ffffff;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li a {
-    display: block;
-    padding: 12px 15px;
-    text-decoration: none;
-    color: #333336;
-    border-bottom: 1px solid #eee;
-    font-weight: normal;
-    font-size: large;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:visited {
-    color: #0066CC;
-}
-
-nav ul li:last-child a {
-    border-bottom: none;
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: transparent;
-    color: #000000;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
+/* Styles the mobile menu button */
 #menuButton {
     display: block;
     background-color: #F5F5F7;
     color: #000000;
     border: 1px solid #ccc;
-    font-size: 1.8em;
-    padding: 0.5rem 1rem;
+    font-size: 1.5em;
+    padding: 0.2rem 0.6rem;
     cursor: pointer;
-    text-align: right;
+    justify-self: end;
 }
 
+/* Styles the main navigation bar */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Basic styles for navigation list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+/* Hides navigation menu by default */
 nav ul.hide-menu {
     display: none;
 }
 
-/* Main */
-main {
-    padding: 1rem 0;
+/* Shows navigation menu when active */
+nav ul.show-menu {
+    display: block;
 }
 
+/* Styles individual navigation links */
+nav ul li a {
+    display: block;
+    padding: 12px 10px;
+    text-decoration: none;
+    color: #333336;
+    border-bottom: 1px solid #eee;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles visited navigation links */
+nav ul li a:visited {
+    color: #0066CC;
+}
+
+/* Removes border from last link */
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+/* Styles nav links on hover/focus */
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #f0f4f8;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Styles the main content area */
+main {
+     padding: 1.5rem 0;
+}
+
+/* Styles the main page heading */
 main h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #000000;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-/* Learning Card */
-section {
-    background-color: #FFFFFF;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-}
-
-section h2 {
-    font-size: 1.5em;
-    color: #000000;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
     margin-top: 0;
 }
 
-/* Footer */
+/* Stacks cards in single column */
+.two-column-grid {
+    display: block;
+    margin-bottom: 0;
+}
+
+/* Adds space between stacked cards */
+.two-column-grid > .card {
+    margin-bottom: 1rem;
+}
+
+/* Basic style for all cards */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Styles the header within cards */
+.card .card-header {
+    background-color: #333336;
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+}
+
+/* Styles heading in card header */
+.card .card-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.4em;
+}
+
+/* Styles content area in cards */
+.card .card-content {
+    padding: 1rem;
+}
+
+/* Styles list in course work card */
+.course-work-card .card-content ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Styles list items in course work */
+.course-work-card .card-content li {
+    margin-bottom: 0.5em;
+    font-size: 0.95em;
+}
+
+/* Styles image in image card */
+.image-card .card-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    display: block;
+}
+
+/* Styles course information card container */
+.course-information-card {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Styles the filter button area */
+.filter-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Styles the filter buttons */
+.filter-btn {
+    padding: 0.4em 0.8em;
+    border: 1px solid #ccc;
+    background-color: #F5F5F7;
+    color: #333336;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Styles filter button on hover */
+.filter-btn:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+/* Styles the active filter button */
+.filter-btn.active {
+    background-color: #333336;
+    color: #ffffff;
+    border-color: #333336;
+    font-weight: bold;
+}
+
+/* Styles the course list grid */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+/* Styles individual course items */
+.course-item {
+    padding: 0.8rem;
+    transition: box-shadow 0.3s ease;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Styles course code/name text */
+.course-item strong {
+    display: block;
+    margin-bottom: 0.25em;
+    color: #000000;
+}
+
+/* Styles completed course items */
+.completed-course {
+    border: 2px solid #0066CC;
+    background-color: #ffffff;
+}
+
+/* Styles current course items */
+.current-course {
+    border: 2px solid #27AE60;
+    background-color: transparent;
+}
+
+/* Styles course item on hover */
+.course-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Styles the main footer bar */
 footer {
     background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 1.5rem 10px;
-    font-size: 0.85em;
-    margin-top: 1rem;
     border-top: 1px solid #eee;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #000000;
 }
 
+/* Styles paragraphs in footer */
 footer p {
     margin: 0.3em 0;
+    font-size: 0.9em;
 }
 
+/* Styles links in footer */
 footer a {
     color: #333336;
     text-decoration: underline;
 }
 
+/* Styles footer links on hover */
 footer a:hover {
     color: #000000;
 }
 
-/* Utilities */
+/* Hides elements with this class */
 .hidden {
     display: none;
 }
