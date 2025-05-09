@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" media="(min-width: 600px)" href="styles/larger.css">
-
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     
 </head>
 <body>
@@ -73,17 +74,10 @@
                 <div class="filter-controls">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="cse">CSE</button>
-                    <button class="filter-btn" data-filter="rel">REL</button>
                     <button class="filter-btn" data-filter="wdd">WDD</button>
                 </div>
                 <div class="card-content">
                     <ul class="course-list">
-                        <li class="course-item completed-course" data-category="cse"><strong>CSE111.005</strong></li>
-                        <li class="course-item completed-course" data-category="wdd"><strong>WDD130.003</strong></li>
-                        <li class="course-item current-course" data-category="cse"><strong>CSE210.005</strong></li>
-                        <li class="course-item current-course" data-category="rel"><strong>REL275A.081</strong></li>
-                        <li class="course-item current-course" data-category="wdd"><strong>WDD131.002</strong></li>
-                        <li class="course-item current-course" data-category="wdd"><strong>WDD231.006</strong></li>
                     </ul>
                 </div>
             </section>
@@ -98,8 +92,6 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script src="scripts/course.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
+
     </body>
 </html>

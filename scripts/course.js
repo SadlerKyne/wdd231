@@ -1,4 +1,8 @@
-const courses = [
+document.addEventListener("DOMContentLoaded", function () {
+    const courseListContainer = document.querySelector(".course-list");
+    
+
+        const courses = [
     {
         subject: 'CSE',
         number: 110,
@@ -76,4 +80,13 @@ const courses = [
         ],
         completed: false
     }
-]
+    ];
+    function displayCourses(coursesToDisplay) {
+        courseListContainer.innerHTML = "";
+coursesToDisplay.forEach(function (course) {
+            const listItem = document.createElement('li');
+            
+});
+
+    
+});
