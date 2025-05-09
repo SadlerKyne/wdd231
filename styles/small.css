@@ -33,8 +33,8 @@ header .content-wrapper {
 
 /* Styles the header image */
 header img {
-    max-height: 45px;
-    max-width: 45px;
+    max-height: 160px;
+    max-width: 120px;
     border-radius: 2%;
     border: 2px solid #ccc;
 }
