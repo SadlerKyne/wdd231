@@ -1,6 +1,6 @@
 @media (min-width: 600px) {
 
-    /* Styles the main page body */
+
     body {
         font-family: 'Arimo', sans-serif;
         line-height: 1.5;
@@ -9,21 +9,21 @@
         color: #000000;
     }
 
-    /* Limits width and centers content */
+
     .content-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
 
-    /* Styles the main header bar */
+
     header {
         background-color: #ffffff;
         border-bottom: 2px solid #ccc;
         padding: 1rem 0;
     }
 
-    /* Arranges content inside header */
+
     header .content-wrapper {
         display: grid;
         grid-template-columns: auto 1fr auto; 
@@ -32,7 +32,7 @@
         width: 100%;
     }
 
-    /* Styles the header image */
+
     header img {
         margin-right: 0;
         border-radius: 2%;
@@ -42,7 +42,7 @@
         justify-self: start;
     }
 
-    /* Styles the header name text */
+
     header .header-name {
         font-size: 2em;
         font-weight: bold;
@@ -53,24 +53,23 @@
         text-align: center;
     }
 
-    /* Hides mobile menu button */
+
     #menuButton {
         display: none !important;
     }
 
-    /* Styles the main navigation bar */
     nav {
         background-color: #ffffff;
         border-bottom: 1px solid #ccc;
     }
 
-    /* Centers content inside nav */
+
     nav .content-wrapper {
         display: flex;
         justify-content: center;
     }
 
-    /* Styles the navigation link list */
+
     nav ul, nav ul.hide-menu {
         display: flex !important;
         flex-direction: row;
@@ -86,7 +85,7 @@
         height: auto;
     }
 
-    /* Styles individual navigation links */
+
     nav ul li a {
         display: block;
         color: #333336;
@@ -98,12 +97,11 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Styles visited navigation links */
     nav ul li a:visited {
         color: #0066CC;
     }
 
-    /* Styles navigation links on hover/focus */
+   
     nav ul li a:hover,
     nav ul li a:focus {
         background-color: transparent;
@@ -112,7 +110,7 @@
         font-weight: bold;
     }
 
-    /* Styles the active navigation link */
+
     nav ul li a.active {
         background-color: #f0f4f8;
         color: #000000;
@@ -122,12 +120,12 @@
         border-radius: 4px;
     }
 
-    /* Styles the main content area */
+ 
     main {
          padding: 1.5rem 0;
     }
 
-    /* Styles the main page heading */
+
     main h1 {
         font-size: 2.8em;
         color: #000000;
@@ -136,7 +134,6 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Creates two columns for cards */
     .two-column-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -144,7 +141,6 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Basic style for all cards */
     .card {
         background-color: #ffffff;
         border-radius: 8px;
@@ -153,7 +149,6 @@
         overflow: hidden;
     }
 
-    /* Styles the header within cards */
     .card .card-header {
         background-color: #333336; 
         color: #ffffff;             
@@ -166,19 +161,16 @@
         text-align: center;
     }
 
-    /* Styles the heading in card header */
     .card .card-header h2 {
         margin: 0;               
         color: #ffffff;             
         font-size: 1.75em;
     }
 
-    /* Styles the main content area inside cards */
     .card .card-content {
         padding: 1.5rem; 
     }
 
-    /* Styles the list in course work card */
     .course-work-card .card-content ul { 
         list-style-position: inside;
         padding-left: 0;
@@ -186,13 +178,11 @@
         margin-bottom: 0;
     }
 
-    /* Styles list items in course work card */
     .course-work-card .card-content li { 
         margin-bottom: 0.5em;
         font-size: 0.95em;
     }
 
-    /* Styles the image in image card */
     .image-card .card-content img {
         width: 100%;
         height: auto;
@@ -200,13 +190,11 @@
         display: block;
     }
 
-    /* Styles the course information card container */
     .course-information-card {
         width: 100%;
         margin-top: 1.5rem;
     }
 
-    /* Styles the filter button area */
     .filter-controls {
         margin-bottom: 1rem;
         display: flex;
@@ -217,7 +205,6 @@
         border-bottom: 2px solid #000000;
     }
 
-    /* Styles the filter buttons */
     .filter-btn {
         padding: 0.5em 1em;
         border: 1px solid #ccc;
@@ -230,13 +217,11 @@
         transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
-    /* Styles filter button on hover */
     .filter-btn:hover {
         background-color: #e0e0e0;
         border-color: #bbb;
     }
 
-    /* Styles the active filter button */
     .filter-btn.active {
         background-color: #333336;
         color: #ffffff;
@@ -244,7 +229,6 @@
         font-weight: bold;
     }
 
-    /* Styles the course list grid */
     .course-list {
         list-style-type: none;
         padding: 0;
@@ -254,7 +238,6 @@
         justify-content: center;
     }
 
-    /* Styles individual course items */
     .course-item {
         padding: 1rem;
         transition: box-shadow 0.3s ease;
@@ -262,31 +245,26 @@
         text-align: center;
     }
 
-    /* Styles course code/name text */
     .course-item strong {
         display: block;
         margin-bottom: 0.25em;
         color: #000000;
     }
 
-    /* Styles completed course items */
     .completed-course {
         border: 2px solid #0066CC;
         background-color: #ffffff;
     }
 
-    /* Styles current course items */
     .current-course {
         border: 2px solid #27AE60;
         background-color: transparent;
     }
 
-    /* Styles course item on hover */
     .course-item:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
-    /* Styles the main footer bar */
     footer {
         background-color: #ffffff;
         border-top: 2px solid #eee;
@@ -295,24 +273,20 @@
         color: #000000;
     }
 
-    /* Styles paragraphs in the footer */
     footer p {
         margin: 0.5em 0;
         font-size: 1em;
     }
 
-    /* Styles links in the footer */
     footer a {
         color: #333336;
         text-decoration: underline;
     }
 
-    /* Styles footer links on hover */
     footer a:hover {
         color: #000000;
     }
 
-    /* Hides elements with this class */
     .hidden {
          display: none;
     }
