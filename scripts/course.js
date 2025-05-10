@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
         const creditsTotalSpan = document.getElementById("displayedCreditsTotal");
 
-    // 2. Define your main data: the courses array
+   
     const courses = [
         {
             subject: 'CSE',
