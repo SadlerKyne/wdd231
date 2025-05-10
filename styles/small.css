@@ -316,3 +316,22 @@ footer a:hover {
 .hidden {
     display: none;
 }
+
+.displayed-credits {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.displayed-credits p {
+    margin: 0;
+    font-size: 1em;
+    color: #333336;
+}
+
+#displayedCreditsTotal {
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    border-bottom: 2px dotted #0066CC; 
+    margin-left: 0.25em;
+}
