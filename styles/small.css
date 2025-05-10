@@ -293,3 +293,10 @@ footer a:hover {
     border-bottom: 2px dotted #0066CC; 
     margin-left: 0.25em;
 }
+
+.image-caption {
+    font-size: 1em;
+    color: #333336;
+    text-align: center;
+    margin-top: 0.5em;
+}
