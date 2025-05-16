@@ -1,0 +1,90 @@
+[
+    {
+    "name": "Hole 'N' The Rock",
+    "address": "11037 S Hwy 191, Moab, UT 84532",
+    "phone": "(435) 686-2250",
+    "websiteURL": "https://www.theholeintherock.com/",
+    "imageFileName": "hole_n_the_rock.webp",
+    "membershipLevel": 3,
+    "category": "attractions",
+    "description": "A unique rock formation and historic site with a fascinating story."
+
+    },
+    {
+        "name": "Moab Giants",
+        "address": "112 West UT-313, Moab, UT 84532",
+        "phone": "(435) 355-0288",
+        "websiteURL": "https://moabgiants.com/",
+        "imageFileName": "moab_giants.webp",
+        "membershipLevel": 2,
+        "category": "attractions",
+        "description": "A dinosaur park and museum featuring life-sized dinosaur replicas and interactive exhibits."
+
+    },
+    {
+        "name": "Moab Backyard Theater",
+        "address": "56 W 100 S, Moab, UT 84532",
+        "phone": "(435) 534-0435",
+        "websiteURL": "http://www.moabbackyardtheater.com/",
+        "imageFileName": "moab_theater.webp",
+        "membershipLevel": 3,
+        "category": "entertainment",
+        "description": "An outdoor theater offering a unique movie-watching experience under the stars."
+
+    },
+    {
+        "name": "World Famous Woody's Tavern",
+        "address": "221 S Main St, Moab, UT 84532",
+        "phone": "(435) 259-3550",
+        "websiteURL": "http://www.moabwoodytavern.com/",
+        "imageFileName": "woodys_tavern.webp",
+        "membershipLevel": 1,
+        "category": "entertainment",
+        "description": "A local bar and grill known for its lively atmosphere, great food, and live music events."
+
+    },
+    {
+        "name": "Moab Cliffs & Canyons",
+        "address": "221 S Main St, Moab, UT 84532",
+        "phone": "(435) 259-3317",
+        "websiteURL": "http://www.moabwoodytavern.com/",
+        "imageFileName": "moab_cliffs_canyons.webp",
+        "membershipLevel": 3,
+        "category": "guides",
+        "description": "A guiding service offering rock climbing, canyoneering, and other outdoor adventures in the Moab area."
+
+    },
+    {
+        "name": "Mild to Wild Rafting & Jeep Tours",
+        "address": "745 Kane Creek Blvd, Moab, UT 84532",
+        "phone": "(970) 247-4789",
+        "websiteURL": "https://mild2wildrafting.com/",
+        "imageFileName": "mild_2_wild.webp",
+        "membershipLevel": 3,
+        "category": "guides",
+        "description": "A guiding service offering rock climbing, canyoneering, and other outdoor adventures in the Moab area."
+
+    },
+    {
+        "name": "Milt's Stop & Eat",
+        "address": "356 S Mill Creek Dr, Moab, UT 84532",
+        "phone": "(435) 259-7424",
+        "websiteURL": "https://order.toasttab.com/online/milts-stop-n-eat-356-s-mill-creek-dr",
+        "imageFileName": "milts_food.webp",
+        "membershipLevel": 3,
+        "category": "food",
+        "description": "A local favorite for burgers, fries, and shakes, known for its casual atmosphere and outdoor seating."
+
+    },
+    {
+        "name": "The Cowboy Grill",
+        "address": "milepost 14, 14 UT-128, Moab, UT 84532",
+        "phone": "(435) 259-2002",
+        "websiteURL": "https://www.redcliffslodge.com/cowboy-grill",
+        "imageFileName": "cowboy_grill.webp",
+        "membershipLevel": 3,
+        "category": "food",
+        "description": "A restaurant located at Red Cliffs Lodge, offering a unique dining experience with stunning views of the Colorado River and surrounding red rock formations."
+
+    }
+]

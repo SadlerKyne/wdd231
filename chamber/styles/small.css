@@ -1,0 +1,328 @@
+body {
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7;
+    color: #000000;
+}
+
+.content-wrapper {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 0.75rem 0;
+}
+
+header .content-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+header img {
+    max-height: 160px;
+    max-width: 120px;
+    border-radius: 2%;
+    border: 2px solid #ccc;
+    height: auto;
+}
+
+header .header-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+#menuButton {
+    display: block;
+    background-color: #F5F5F7;
+    color: #000000;
+    border: 1px solid #ccc;
+    font-size: 1.5em;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    justify-self: end;
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+nav ul.hide-menu {
+    display: none;
+}
+
+nav ul.show-menu {
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 10px;
+    text-decoration: none;
+    color: #333336;
+    border-bottom: 1px solid #eee;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:visited {
+    color: #0066CC;
+}
+
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #f0f4f8;
+    color: #000000;
+    text-decoration: none;
+}
+
+main {
+     padding: 1.5rem 0;
+}
+
+main h1 {
+    font-size: 1.8em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.filter-controls-directory { 
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 15px 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-btn {
+    padding: 0.4em 0.8em;
+    border: 1px solid #ccc;
+    background-color: #F5F5F7;
+    color: #333336;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+.filter-btn.active {
+    background-color: #333336;
+    color: #ffffff;
+    border-color: #333336;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #000000;
+    min-height: 100px;
+}
+
+footer p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #333336;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .content-wrapper div:nth-child(2) img {
+    margin: 0 0.3rem;
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
+.hero-directory {
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: #e0e0e0;
+}
+
+.hero-directory img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    border-radius: 4px; 
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.hero-directory .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    width: auto;
+    max-width: 90%;
+}
+
+.hero-directory .hero-text h1 {
+    font-size: 1.6em;
+    margin: 0;
+    color: inherit;
+    font-weight: bold;
+}
+
+.directory-controls { 
+    display: flex;
+    justify-content: center; 
+    gap: 0.5rem; 
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.directory-controls button {
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    background-color: #e9e9e9;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.directory-controls button:hover {
+    background-color: #d0d0d0;
+}
+
+.directory-controls button.active { 
+    background-color: #333336;
+    color: #ffffff;
+    border-color: #333336;
+    font-weight: bold;
+}
+
+#members-display-area {
+}
+
+.member-card {
+    background-color: #ffffff; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 1rem;             
+    margin-bottom: 1.5rem;       
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.member-card img { 
+    width: 160px; 
+    height: 120px; 
+    object-fit: cover; 
+    display: block;   
+    margin: 0 auto 0.75rem auto; 
+    border: 1px solid #eee; 
+    padding: 3px; 
+    border-radius: 4px;
+}
+.member-card h2 {
+    font-size: 1.4em; 
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center; 
+}
+
+.member-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    color: #000000;
+}
+
+.member-card p.address {
+    min-height: 1em;
+}
+
+.member-card p.phone {
+    min-height: 1em;
+}
+
+.member-card p.website a {
+    color: #000000; 
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.member-card p.website a:hover {
+    text-decoration: underline;
+}
+
+.member-card p.membership-level {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #000000; 
+    text-align: center; 
+    margin-top: 0.75rem;
+}
+
+.member-card p.other-details {
+    font-size: 0.85em;
+    min-height: 1em;
+}
+footer .social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+footer .social-links-container img {
+    vertical-align: middle;
+}
