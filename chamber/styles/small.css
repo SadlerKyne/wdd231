@@ -200,10 +200,6 @@ footer .social-links-container img {
     vertical-align: middle;
 }
 
-.hidden {
-    display: none;
-}
-
 .hero-directory {
     position: relative;
     margin-bottom: 1rem;
@@ -314,4 +310,9 @@ footer .social-links-container img {
 .member-card p.other-details {
     font-size: 0.85em;
     min-height: 1em;
+}
+nav ul li a.active {
+    background-color: #f0f4f8;
+    color: #000000;           
+    font-weight: bold; 
 }
