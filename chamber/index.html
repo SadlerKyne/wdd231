@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moab Chamber of Commerce Directory</title>
+    <title>Moab Chamber of Commerce - Home</title>
     <meta name="description" content="Landing page for Chamber of Commerce of Moab, Utah.">
     <meta name="author" content="Sadler N. Kyne">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" media="(min-width: 600px)" href="styles/larger.css">
-    <script src="../scripts/dates.js" defer></script>
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>       
+    <script src="../scripts/navigation.js" defer></script> 
+    <script src="scripts/home.js" defer></script>
     <meta property="og:title" content="Moab Chamber of Commerce Landing Page">
     <meta property="og:type" content="website">
     <meta property="og:description" content="A Chamber of Commerce Landing page for Moab, Utah.">
     <meta property="og:image" content="https://SadlerKyne.github.io/wdd231/chamber/images/delicate_arch_hero.webp">
-    <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/chamber/index.html">
 </head>
 <body>
 
@@ -34,8 +34,8 @@
     <nav>
         <div class="content-wrapper">
             <ul class="hide-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
@@ -43,59 +43,54 @@
     </nav>
 
     <main>
-        <div class="content-wrapper"> 
-            <section class="hero-directory">
+        <div class="content-wrapper"> <section class="hero-directory">
                 <div class="hero-text">
-                    <h1>Moab Business Directory</h1>
-                </div>
+                    <h1>Chamber of Commerce Moab, Utah</h1> </div>
                 <img src="images/delicate_arch_hero.webp" alt="Hero image of Delicate Arch in Moab" width="1600" height="1025">
-
             </section>
 
-            <div class="filter-controls-directory">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="attractions">Attractions</button>
-                <button class="filter-btn" data-filter="entertainment">Entertainment</button>
-                <button class="filter-btn" data-filter="guides">Guides</button>
-                <button class="filter-btn" data-filter="food">Food</button>
-            </div>
+            <section class="call-to-action">
+                <h2>Join Our Thriving Business Community!</h2>
+                <p>Discover the benefits of membership and help us grow Moab together.</p>
+                <a href="join.html" class="cta-button">Become a Member Today!</a>
+            </section>
 
-            <div class="directory-controls">
-                <button id="grid-view-btn" aria-label="Grid View">⏹️ Grid</button> 
-                <button id="list-view-btn" aria-label="List View">📄 List</button>
-            </div>
+            <section class="events-home">
+                <h2>Upcoming Events</h2>
+                <article>
+                    <h4>Chamber Monthly Mixer</h4>
+                    <p>Date: First Tuesday of every month | Location: Moab Community Center</p>
+                    <p>A great opportunity to network with local business leaders.</p>
+                    <p><a href="#">Read more...</a></p>
+                </article>
+                <article>
+                    <h4>Annual Moab Business Expo</h4>
+                    <p>Date: October 15th-16th | Location: Event Arena</p>
+                    <p>Showcase your business and discover new opportunities.</p>
+                    <p><a href="#">Learn more & Register...</a></p>
+                </article>
+                </section>
 
-            <div id="members-display-area" class="cards">
-                <section class="member-card">
-                       
-                    <h2>Sample Business Name 1</h2>
-                    <p class="address">123 Commerce Way, Moab, UT 84532</p>
-                    <p class="phone">(435) 555-1234</p>
-                    <p class="website"><a href="#">samplebusiness1.com</a></p>
-                    <p class="membership-level">Membership Level: Gold</p>
-                    <p class="other-details">Placeholder description for sample business 1.</p>
-                </section>
-                <section class="member-card">
-                       
-                    <h2>Sample Business Name 2</h2>
-                    <p class="address">456 Industry Drive, Moab, UT 84532</p>
-                    <p class="phone">(435) 555-5678</p>
-                    <p class="website"><a href="#">samplebusiness2.com</a></p>
-                    <p class="membership-level">Membership Level: Silver</p>
-                    <p class="other-details">Placeholder description for sample business 2.</p>
-                </section>
-                <section class="member-card">
-                       
-                    <h2>Sample Business Name 3</h2>
-                    <p class="address">789 Market Street, Moab, UT 84532</p>
-                    <p class="phone">(435) 555-8910</p>
-                    <p class="website"><a href="#">samplebusiness3.com</a></p>
-                    <p class="membership-level">Membership Level: Bronze</p>
-                    <p class="other-details">Placeholder description for sample business 3.</p>
-                </section>
-            </div>
-        </div>
-    </main>
+            <section id="weather-section" class="weather-home">
+                <h2>Local Weather in Moab</h2>
+                <div class="current-weather-details">
+                    <p>Current Temperature: <strong id="current-temp">--</strong></p>
+                    <p>Conditions: <em id="weather-description">Loading...</em></p>
+                    <img id="weather-icon" src="#" alt="Current weather icon" width="50" height="50"> </div>
+                <div id="weather-forecast-area">
+                    <h3>3-Day Forecast</h3>
+                    <p><em>Forecast loading...</em></p>
+                    </div>
+            </section>
+
+            <section class="spotlights-home">
+                <h2>Member Spotlights</h2>
+                <div id="member-spotlights-area">
+                    <p><em>Our valued members loading...</em></p>
+                    </div>
+            </section>
+
+        </div> </main>
 
     <footer>
         <div class="content-wrapper">
@@ -113,11 +108,11 @@
                 </p>
             </div>
             <div>
-                <p>©<span id="currentYear"> </span> Moab Chamber of Commerce</p>
+                <p>©<span id="currentYear">2025</span> Moab Chamber of Commerce</p>
                 <p>Sadler N. Kyne | WDD 231 Class Project</p>
-                <p>Last Modification: <span id="lastModified"> </span></p> 
+                <p>Last Modification: <span id="lastModified">Timestamp</span></p>
             </div>
         </div>
     </footer>
-    </body>
+</body>
 </html>
