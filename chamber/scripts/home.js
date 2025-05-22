@@ -12,7 +12,6 @@ async function getMemberData() {
         const response = await fetch(membersDataURL);
         if (response.ok) {
             allMembers = await response.json();
-            console.log("Member data fetched successfully for home page:", allMembers);
             displayMemberSpotlights(allMembers);
         } else {
             console.error('Error fetching member data for home page:', response.status, response.statusText);
@@ -23,10 +22,10 @@ async function getMemberData() {
 }
 
 async function fetchWeatherData() {
-    if (WEATHER_API_KEY === 'YOUR_API_KEY') {
-        console.warn("WEATHER API KEY is not set. Please replace 'YOUR_API_KEY' in home.js.");
+    if (WEATHER_API_KEY === 'YOUR_API_KEY' || WEATHER_API_KEY === '' || WEATHER_API_KEY.length < 30) {
+        console.warn("WEATHER API KEY is not set or is invalid. Please check home.js.");
         const weatherSection = document.getElementById('weather-section');
-        if (weatherSection) weatherSection.innerHTML = "<p>Weather data currently unavailable. API key needed.</p>";
+        if (weatherSection) weatherSection.innerHTML = "<p>Weather data currently unavailable.</p>";
         return;
     }
     try {
@@ -37,13 +36,12 @@ async function fetchWeatherData() {
 
         if (currentResponse.ok && forecastResponse.ok) {
             const currentData = await currentResponse.json();
-            const forecastData = await response.json();
-            console.log("Current weather data:", currentData);
-            console.log("Forecast weather data:", forecastData);
+            const forecastData = await forecastResponse.json();
             displayCurrentWeather(currentData);
             displayWeatherForecast(forecastData);
         } else {
-            console.error('Error fetching weather data. Current OK:', currentResponse.ok, 'Forecast OK:', forecastResponse.ok);
+            if (!currentResponse.ok) console.error('Error fetching current weather data:', currentResponse.status, currentResponse.statusText);
+            if (!forecastResponse.ok) console.error('Error fetching forecast weather data:', forecastResponse.status, forecastResponse.statusText);
         }
     } catch (error) {
         console.error("Fetch API failed for weather data:", error);
@@ -61,12 +59,11 @@ function displayMemberSpotlights(members) {
     const qualifiedMembers = members.filter(member => member.membershipLevel === 3 || member.membershipLevel === 2);
 
     if (qualifiedMembers.length === 0) {
-        spotlightsArea.innerHTML = "<p>No qualified members available for spotlights at this time.</p>";
+        spotlightsArea.innerHTML = "<p>No qualified members available for spotlights.</p>";
         return;
     }
 
     const shuffledMembers = qualifiedMembers.sort(() => 0.5 - Math.random());
-
     const numSpotlights = Math.min(shuffledMembers.length, 3);
     const selectedMembers = shuffledMembers.slice(0, numSpotlights);
 
@@ -83,14 +80,6 @@ function displayMemberSpotlights(members) {
 
         let h3 = document.createElement('h3');
         h3.textContent = member.name;
-
-        let address = document.createElement('p');
-        address.classList.add('address');
-        address.textContent = member.address;
-
-        let phone = document.createElement('p');
-        phone.classList.add('phone');
-        phone.textContent = member.phone;
 
         let website = document.createElement('p');
         website.classList.add('website');
@@ -119,11 +108,19 @@ function displayCurrentWeather(data) {
     const weatherIconEl = document.getElementById('weather-icon');
 
     if (currentTempEl) currentTempEl.textContent = `${Math.round(data.main.temp)}°F`;
-    if (weatherDescEl) weatherDescEl.textContent = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
-    if (weatherIconEl) {
+    if (weatherDescEl && data.weather && data.weather[0]) {
+        weatherDescEl.textContent = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+    } else if (weatherDescEl) {
+        weatherDescEl.textContent = 'N/A';
+    }
+
+    if (weatherIconEl && data.weather && data.weather[0]) {
         const iconCode = data.weather[0].icon;
         weatherIconEl.setAttribute('src', `https://openweathermap.org/img/wn/${iconCode}@2x.png`);
         weatherIconEl.setAttribute('alt', data.weather[0].description);
+        weatherIconEl.style.display = 'inline';
+    } else if (weatherIconEl) {
+        weatherIconEl.style.display = 'none';
     }
 }
 
@@ -133,32 +130,72 @@ function displayWeatherForecast(data) {
         console.error("Forecast area '#weather-forecast-area' not found in HTML.");
         return;
     }
-    forecastArea.innerHTML = '<h4>3-Day Forecast</h4>';
+    forecastArea.innerHTML = '<h3>3-Day Forecast</h3>';
 
     const dailyForecasts = [];
-    const today = new Date().getDate();
-    let count = 0;
+    const today = new Date().setHours(0,0,0,0);
 
-    for (let i = 0; i < data.list.length && count < 3; i++) {
-        const forecastDate = new Date(data.list[i].dt * 1000);
-        if (forecastDate.getDate() > today && forecastDate.getHours() >= 12 && forecastDate.getHours() < 15) {
-            if (!dailyForecasts.find(df => new Date(df.dt * 1000).getDate() === forecastDate.getDate())) {
-                dailyForecasts.push(data.list[i]);
-                count++;
+    if (data && data.list) {
+        const uniqueDaysData = {};
+        for (const item of data.list) {
+            const forecastDate = new Date(item.dt * 1000);
+            const forecastDayStart = new Date(forecastDate).setHours(0,0,0,0);
+
+            if (forecastDayStart > today) {
+                const dayKey = forecastDate.toISOString().split('T')[0];
+                if (!uniqueDaysData[dayKey]) {
+                     uniqueDaysData[dayKey] = {
+                        temps: [],
+                        icons: [],
+                        descriptions: [],
+                        dt: item.dt // Store dt for sorting, will use the first one for the day
+                    };
+                }
+                uniqueDaysData[dayKey].temps.push(item.main.temp);
+                if (forecastDate.getHours() >= 12 && forecastDate.getHours() <= 14 && uniqueDaysData[dayKey].icons.length === 0) { // Prioritize noonish icon
+                    uniqueDaysData[dayKey].icons.push(item.weather[0].icon);
+                    uniqueDaysData[dayKey].descriptions.push(item.weather[0].description);
+                } else if (uniqueDaysData[dayKey].icons.length === 0) { // Fallback to first available icon
+                     uniqueDaysData[dayKey].icons.push(item.weather[0].icon);
+                     uniqueDaysData[dayKey].descriptions.push(item.weather[0].description);
+                }
             }
+        }
+        
+        const sortedDayKeys = Object.keys(uniqueDaysData).sort((a,b) => new Date(a) - new Date(b));
+
+        for (let i = 0; i < Math.min(3, sortedDayKeys.length); i++) {
+            const dayKey = sortedDayKeys[i];
+            const dayData = uniqueDaysData[dayKey];
+            const date = new Date(dayData.dt * 1000);
+            const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+            
+            const avgTemp = dayData.temps.reduce((acc, temp) => acc + temp, 0) / dayData.temps.length;
+            const displayTemp = Math.round(avgTemp);
+            
+            const iconCode = dayData.icons[0] || '01d'; 
+            const desc = dayData.descriptions[0] ? dayData.descriptions[0].replace(/\b\w/g, char => char.toUpperCase()) : 'Weather';
+
+            dailyForecasts.push({ dayName, temp: displayTemp, iconCode, desc });
         }
     }
 
-    if (dailyForecasts.length < 3) {
-        const uniqueDays = {};
-        data.list.forEach(item => {
-            const forecastDt = new Date(item.dt * 1000);
-            if (forecastDt.getDate() > today) {
-                const dayKey = forecastDt.toISOString().split('T')[0];
-                if (!uniqueDays[dayKey] && Object.keys(uniqueDays).length < 3) {
-                    uniqueDays[dayKey] = item;
-                }
-            }
+
+    if (dailyForecasts.length > 0) {
+        dailyForecasts.forEach(forecast => {
+            const dayDiv = document.createElement('div');
+            dayDiv.classList.add('forecast-day');
+            dayDiv.innerHTML = `
+                <p class="forecast-dayname">${forecast.dayName}</p>
+                <img src="https://openweathermap.org/img/wn/${forecast.iconCode}.png" alt="${forecast.desc}" loading="lazy">
+                <p class="forecast-temp">${forecast.temp}°F</p>
+            `;
+            forecastArea.appendChild(dayDiv);
         });
-        if (Object.keys(uniqueDays).length > dailyForecasts.length) {
-            const sorted
+    } else {
+        forecastArea.innerHTML += '<p>No forecast data available for upcoming days.</p>';
+    }
+}
+
+getMemberData();
+fetchWeatherData();

@@ -316,3 +316,213 @@ nav ul li a.active {
     color: #000000;           
     font-weight: bold; 
 }
+
+.events-home {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.events-home h2 {
+    text-align: center;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.events-home article {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed #ccc;
+}
+.events-home article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.events-home article h4 {
+    color: #000000;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.events-home article p {
+    font-size: .9em;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+.events-home article p:last-child {
+    margin-bottom: 0;
+}
+.events-home article a {
+color: #004080;
+text-decoration: underline;
+font-weight: bold;
+}
+.events-home article a:hover,
+.events-home article a:focus {
+    color: #004c99;
+    text-decoration: none;
+}
+.call-to-action {
+    background-color: #f0f4f8;
+    color: #000000;
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    border-bottom: #ccc 4px dotted;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.call-to-action h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.call-to-action p {
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.call-to-action .cta-button {
+    display: inline-block;
+    background-color: #B3FFB3;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.call-to-action .cta-button:hover,
+.call-to-action .cta-button:focus {
+    background-color: #A3EEA3;
+    color: #000000;
+    transform: scale(1.05);
+}
+.weather-home{
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.weather-home h2 {
+    text-align: center;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.current-weather-details {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.current-weather-details p {
+    margin: 0.3rem 0;
+    font-size: 1em;
+}
+#current-temp {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #000000;
+}
+#weather-description {
+    font-style: normal;
+    color: #333333;
+    font-size: 1.1em;
+}
+#weather-icon {
+    display: block;
+    margin: 0.5rem auto;
+    filter: drop-shadow(2px 2px 4px);
+}
+#weather-forecast-area {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.forecast-day {
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-radius: 0px;
+    text-align: center; 
+}
+#weather-forecast-area .forecast-day img {
+    display: block;
+    margin: 0.25rem auto;
+    filter: drop-shadow(2px 2px 4px);
+    height: auto;
+}
+#weather-forecast-area h3 { 
+    font-size: 1.3em;
+    color: #333333;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+/* In small.css */
+.forecast-day .forecast-dayname {
+    font-weight: bold; 
+    font-size: 1.1em;    
+    margin-bottom: 0.25rem;
+    color: #000000;       
+}
+.spotlights-home {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.spotlights-home h2 {
+    text-align: center;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8em;
+}
+.spotlight-member-card {
+    background-color: #ffffff; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 1rem;             
+    margin-bottom: 1.5rem;       
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+.spotlight-member-card:last-child {
+    margin-bottom: 0;
+}
+.spotlight-member-card img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.75rem auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.spotlight-member-card h3 {
+    font-size: 1.4em; 
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center; 
+}
+.spotlight-member-card .website a {
+    color: #004080;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.spotlight-member-card .website a:hover,
+.spotlight-member-card .website a:focus {
+    color: #002B55;
+    text-decoration: none;
+}
+.spotlight-member-card .membership-level-spotlight {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #555555;
+    margin-top: 0.5rem;
+}
