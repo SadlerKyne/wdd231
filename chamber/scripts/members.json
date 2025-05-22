@@ -15,7 +15,7 @@
         "address": "112 West UT-313, Moab, UT 84532",
         "phone": "(435) 355-0288",
         "websiteURL": "https://Moabgiants.com/",
-        "imageFileName": "Moab_giants.webp",
+        "imageFileName": "moab_giants.webp",
         "membershipLevel": 2,
         "category": "attractions",
         "description": "A dinosaur park and museum featuring life-sized dinosaur replicas and interactive exhibits."
@@ -26,7 +26,7 @@
         "address": "56 W 100 S, Moab, UT 84532",
         "phone": "(435) 534-0435",
         "websiteURL": "http://www.Moabbackyardtheater.com/",
-        "imageFileName": "Moab_theater.webp",
+        "imageFileName": "moab_theater.webp",
         "membershipLevel": 3,
         "category": "entertainment",
         "description": "An outdoor theater offering a unique movie-watching experience under the stars."
@@ -48,7 +48,7 @@
         "address": "221 S Main St, Moab, UT 84532",
         "phone": "(435) 259-3317",
         "websiteURL": "http://www.Moabwoodytavern.com/",
-        "imageFileName": "Moab_cliffs_canyons.webp",
+        "imageFileName": "moab_cliffs_canyons.webp",
         "membershipLevel": 3,
         "category": "guides",
         "description": "A guiding service offering rock climbing, canyoneering, and other outdoor adventures in the Moab area."
