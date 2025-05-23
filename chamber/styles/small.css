@@ -202,38 +202,20 @@ footer .social-links-container img {
 
 .hero-directory {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
     background-color: #e0e0e0;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .hero-directory img {
     width: 100%;
-    height: auto;
-    display: block; 
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 4px; 
-    max-height: 250px;
-    object-fit: cover;
-}
-
-.hero-directory .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; 
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    width: auto;
-    max-width: 90%;
-}
-
-.hero-directory .hero-text h1 {
-    font-size: 1.6em;
-    margin: 0;
-    color: inherit;
-    font-weight: bold;
 }
 
 .directory-controls { 
@@ -356,33 +338,42 @@ nav ul li a.active {
     margin-bottom: 0;
 }
 .events-home article a {
-color: #004080;
-text-decoration: underline;
-font-weight: bold;
+    color: #004080;
+    text-decoration: underline;
+    font-weight: bold;
 }
 .events-home article a:hover,
 .events-home article a:focus {
     color: #004c99;
     text-decoration: none;
 }
+
 .call-to-action {
-    background-color: #f0f4f8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 480px;
+    background-color: rgba(255, 255, 255, 0.5); 
     color: #000000;
-    padding: 2rem 1rem;
-    border-radius: 4px;
-    border-bottom: #ccc 4px dotted;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
     text-align: center;
-    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 .call-to-action h2 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    color: #000000;
 }
 .call-to-action p {
-    font-size: 1.1em;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    color: #000000;
 }
 .call-to-action .cta-button {
     display: inline-block;
@@ -401,6 +392,7 @@ font-weight: bold;
     color: #000000;
     transform: scale(1.05);
 }
+
 .weather-home{
     background-color: #ffffff;
     padding: 1rem;
@@ -435,10 +427,16 @@ font-weight: bold;
 #weather-icon {
     display: block;
     margin: 0.5rem auto;
-    filter: drop-shadow(2px 2px 4px);
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
 }
 #weather-forecast-area {
     margin-top: 1.5rem;
+    text-align: center;
+}
+#weather-forecast-area h3 { 
+    font-size: 1.3em;
+    color: #333333;
+    margin-bottom: 0.75rem;
     text-align: center;
 }
 .forecast-day {
@@ -453,22 +451,17 @@ font-weight: bold;
 #weather-forecast-area .forecast-day img {
     display: block;
     margin: 0.25rem auto;
-    filter: drop-shadow(2px 2px 4px);
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
     height: auto;
+    max-width: 40px;
 }
-#weather-forecast-area h3 { 
-    font-size: 1.3em;
-    color: #333333;
-    margin-bottom: 0.75rem;
-    text-align: center;
-}
-/* In small.css */
 .forecast-day .forecast-dayname {
     font-weight: bold; 
     font-size: 1.1em;    
     margin-bottom: 0.25rem;
     color: #000000;       
 }
+
 .spotlights-home {
     background-color: #ffffff;
     padding: 1rem;
@@ -490,12 +483,16 @@ font-weight: bold;
     padding: 1rem;             
     margin-bottom: 1.5rem;       
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .spotlight-member-card:last-child {
     margin-bottom: 0;
 }
 .spotlight-member-card img {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
     display: block;
     margin: 0 auto 0.75rem auto;
