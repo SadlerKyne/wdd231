@@ -144,3 +144,6 @@ html {
     [hidden] {
     display: none;
     } 
+    .index-heading {
+        display: none;
+    }
