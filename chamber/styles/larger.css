@@ -7,21 +7,21 @@
 
     header .content-wrapper {
         display: grid;
-        grid-template-columns: auto 1fr; 
+        grid-template-columns: auto 1fr;
         align-items: center;
-        gap: 20px; 
+        gap: 20px;
     }
     header img {
         border-radius: 2%;
         border: 3px solid #ccc;
-        max-width: 167px; 
-        height: auto; 
+        max-width: 167px;
+        height: auto;
         justify-self: start;
     }
     header .header-name {
         font-size: 2em;
-        white-space: normal; 
-        text-align: left; 
+        white-space: normal;
+        text-align: left;
         margin-left: 20px;
     }
 
@@ -71,9 +71,9 @@
     }
 
     .hero-directory {
-        position: relative; 
+        position: relative;
         background-color: #d0d0d0;
-        min-height: 450px; 
+        min-height: 450px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -82,19 +82,43 @@
     }
     .hero-directory img {
         width: 100%;
-        height: 100%; 
+        height: 100%;
         object-fit: cover;
-        border-radius: 8px; 
+        border-radius: 8px;
     }
-    
+
+    .hero-directory .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: #000000;
+        text-align: center;
+        width: 60%;
+        max-width: 700px;
+        padding: 2.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+    }
+
+    .hero-directory .hero-text h1 {
+        margin: 0;
+        font-size: 2.2em;
+        line-height: 1.3;
+        color: #000000;
+    }
+
     .filter-controls-directory {
         margin-bottom: 1.5rem;
-        padding: 20px 0; 
-        border-bottom: 2px solid #ccc; 
+        padding: 20px 0;
+        border-bottom: 2px solid #ccc;
     }
     .filter-btn {
         padding: 0.5em 1em;
-        font-size: 1em; 
+        font-size: 1em;
     }
     .directory-controls {
         margin-bottom: 1.5rem;
@@ -112,13 +136,13 @@
         gap: 1.5rem;
         padding: 1.5rem;
         text-align: left;
-        margin-bottom: 1.5rem; 
+        margin-bottom: 1.5rem;
     }
     #members-display-area.list .member-card img {
-        width: 160px; 
+        width: 160px;
         height: 120px;
-        object-fit: cover; 
-        margin: 0; 
+        object-fit: cover;
+        margin: 0;
         flex-shrink: 0;
         border-radius: 6px;
         border: 1px solid #eee;
@@ -138,34 +162,35 @@
         text-align: left;
         margin-top: 0.6rem;
     }
-    #members-display-area.list .member-card > div { 
+    #members-display-area.list .member-card > div {
         flex-grow: 1;
     }
+
     .member-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%; 
-        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 1px solid #ccc;
         background-color: #fff;
         box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-        margin: 0; 
-        padding: 1.5rem; 
+        margin: 0;
+        padding: 1.5rem;
     }
-    .member-card img { 
-        width: 160px; 
-        height: 120px; 
-        object-fit: cover; 
+    .member-card img {
+        width: 160px;
+        height: 120px;
+        object-fit: cover;
         margin: 0 auto 1rem auto;
         border-radius: 6px;
-        border: none; 
-        padding: 0; 
+        border: none;
+        padding: 0;
     }
     .member-card:hover {
-        transform: scale(1.03); 
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-        z-index: 10; 
+        transform: scale(1.03);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 10;
     }
     .member-card h2 {
         font-size: 1.5em;
@@ -176,35 +201,35 @@
 
     .call-to-action {
         position: absolute;
-        top: 50%; 
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); 
-        width: 60%; 
-        max-width: 700px; 
+        transform: translate(-50%, -50%);
+        width: 60%;
+        max-width: 700px;
         background-color: rgba(255, 255, 255, 0.50);
-        color: #000000; 
-        padding: 2.5rem; 
-        border-radius: 8px; 
-        text-align: center; 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-        z-index: 10; 
-        margin-bottom: 0; 
-        border-bottom: none; 
+        color: #000000;
+        padding: 2.5rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 10;
+        margin-bottom: 0;
+        border-bottom: none;
     }
     .call-to-action h2 {
-        font-size: 2.2em; 
+        font-size: 2.2em;
         margin-top: 0;
         margin-bottom: 1rem;
         color: #000000;
     }
     .call-to-action p {
-        font-size: 1.2em; 
+        font-size: 1.2em;
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #000000;
     }
     .call-to-action .cta-button {
-        font-size: 1.2em; 
+        font-size: 1.2em;
         padding: 1rem 2rem;
     }
 
@@ -212,8 +237,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
-        padding: 1.5rem;  
-        align-items: stretch; 
+        padding: 1.5rem;
+        align-items: stretch;
     }
     .events-home h2 {
         grid-column: 1 / -1;
@@ -228,14 +253,14 @@
         border: 1px solid #ccc;
         padding: 1rem;
         border-radius: 4px;
-        display: flex; 
+        display: flex;
         flex-direction: column;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
     .events-home article p:last-child {
         margin-bottom: 0;
     }
-    
+
     .weather-home {
         padding: 1.5rem;
     }
@@ -277,20 +302,20 @@
         font-size: 1.5em;
     }
     .forecast-day {
-        flex: 1; 
-        min-width: 120px; 
+        flex: 1;
+        min-width: 120px;
         padding: 1rem 0.5rem;
         border-top: 3px solid #ccc;
         border-bottom: 3px solid #ccc;
         border-radius: 0px;
-        text-align: center; 
+        text-align: center;
     }
     #weather-forecast-area .forecast-day img {
         filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
         max-width: 40px;
-        height: auto;    
-        display: block;  
-        margin: 0.25rem auto; 
+        height: auto;
+        display: block;
+        margin: 0.25rem auto;
     }
 
     .spotlights-home {
@@ -306,49 +331,158 @@
         flex-wrap: wrap;
     }
     .spotlight-member-card {
-        flex-basis: 280px; 
-        flex-grow: 1;     
+        flex-basis: 280px;
+        flex-grow: 1;
         margin-bottom: 1.5rem;
-        display: flex; 
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #ffffff; 
-        border: 1px solid #ddd;    
-        border-radius: 8px;        
-        padding: 1rem;             
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-        text-align: center; 
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        text-align: center;
     }
     .spotlight-member-card img {
-        max-width: 150px; 
-        height: auto;    
-        display: block;  
-        margin: 0 auto 0.75rem auto; 
-        border: 1px solid #eee;     
-        border-radius: 4px;       
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto 0.75rem auto;
+        border: 1px solid #eee;
+        border-radius: 4px;
     }
-    .spotlight-member-card h3 { 
-        font-size: 1.4em; 
+    .spotlight-member-card h3 {
+        font-size: 1.4em;
         color: #000000;
         margin-top: 0;
         margin-bottom: 0.5rem;
-        text-align: center; 
+        text-align: center;
     }
-    .spotlight-member-card .website a { 
+    .spotlight-member-card .website a {
         color: #004080;
         text-decoration: underline;
         font-weight: bold;
         font-size: 0.9em;
     }
     .spotlight-member-card .website a:hover,
-    .spotlight-member-card .website a:focus { 
+    .spotlight-member-card .website a:focus {
         color: #002B55;
         text-decoration: none;
     }
-    .spotlight-member-card .membership-level-spotlight { 
+    .spotlight-member-card .membership-level-spotlight {
         font-size: 0.85em;
         font-style: italic;
         color: #555555;
         margin-top: 0.5rem;
+    }
+
+    .join-page-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .form-section {
+        order: 1;
+    }
+
+    .membership-info-section {
+        order: 2;
+        position: sticky;
+        top: 70px;
+        margin-top: 0;
+        padding: 1.5rem;
+    }
+
+    #joinForm fieldset {
+        padding: 1.5rem;
+    }
+    #joinForm legend {
+        font-size: 1.2em;
+    }
+    #joinForm label {
+         font-size: 1em;
+    }
+    #joinForm input[type="text"],
+    #joinForm input[type="email"],
+    #joinForm input[type="tel"],
+    #joinForm textarea {
+        padding: 0.75rem;
+        font-size: 1em;
+    }
+    #joinForm textarea {
+        min-height: 80px;
+    }
+    #joinForm .submit-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.1em;
+    }
+
+    div.membership-card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    div.membership-card h3 {
+        font-size: 1.3em;
+    }
+    div.membership-card p {
+        font-size: 0.9em;
+        margin-bottom: 1rem;
+    }
+    div.membership-card .modal-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9em;
+    }
+
+    .modal {
+        padding-top: 60px;
+    }
+    .modal-content {
+        margin: 8% auto;
+        padding: 25px;
+        max-width: 600px;
+    }
+    .close-button {
+        font-size: 28px;
+        top: 10px;
+        right: 20px;
+    }
+    .modal-content h4 {
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+    }
+    .modal-content li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95em;
+    }
+    .modal-content p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .thankyou-message {
+        padding: 2rem;
+    }
+    .thankyou-message h1 {
+        font-size: 2em;
+    }
+    .thankyou-message p {
+        font-size: 1.1em;
+    }
+    .form-data-summary {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 600px;
+        font-size: 1em;
+    }
+    .form-data-summary li {
+         font-size: 0.95em;
+    }
+
+    .thankyou-message .cta-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.05em;
+        margin-top: 1rem;
     }
 }

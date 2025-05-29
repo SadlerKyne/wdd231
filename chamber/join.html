@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Moab Chamber of Commerce</title>
+    <meta name="description" content="Become a member of the Moab Chamber of Commerce. Fill out our application form to join today.">
+    <meta name="author" content="Sadler N. Kyne">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" media="(min-width: 600px)" href="styles/larger.css">
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script> <meta property="og:title" content="Join the Moab Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Application page to join the Moab Chamber of Commerce.">
+    <meta property="og:image" content="https://SadlerKyne.github.io/wdd231/chamber/images/delicate_arch_hero.webp">
+    <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/chamber/join.html">
+</head>
+<body>
+
+    <header>
+        <div class="content-wrapper">
+            <img src="images/moablogo.webp" alt="Logo of Moabs Arches and Mountains." width="167" height="133">
+            <div class="header-name">Moab Chamber of Commerce</div> <button id="menuButton" aria-label="Toggle Menu">☰</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="content-wrapper">
+            <ul class="hide-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-wrapper join-page-layout">
+            <section class="form-section">
+                <h1>Join Our Chamber</h1>
+                <p>We're excited to have you join our community! Please fill out the form below to apply for membership.</p>
+
+                <form action="thankyou.html" method="get" id="joinForm">
+                    <fieldset>
+                        <legend>Applicant Information</legend>
+                        <label for="fname">First Name*
+                            <input type="text" id="fname" name="fname" title="Applicant's First Name" required autocomplete="given-name">
+                        </label>
+                        <label for="lname">Last Name*
+                            <input type="text" id="lname" name="lname" title="Applicant's Last Name" required autocomplete="family-name">
+                        </label>
+                        <label for="orgtitle">Organizational Title
+                            <input type="text" id="orgtitle" name="orgtitle" title="Applicant's Organizational Title (min 7 alpha, hyphens, spaces)" autocomplete="organization-title" pattern="[a-zA-Z\-\s]{7,}">
+                        </label>
+                        <label for="email">Email Address*
+                            <input type="email" id="email" name="email" title="Applicant's Email Address" required autocomplete="email" placeholder="example@domain.com">
+                        </label>
+                        <label for="phone">Mobile Phone Number*
+                            <input type="tel" id="phone" name="phone" title="Applicant's Mobile Phone Number" required autocomplete="tel">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Business/Organization Information</legend>
+                        <label for="orgname">Business/Organization's Name*
+                            <input type="text" id="orgname" name="orgname" title="Business/Organization's Name" required autocomplete="organization">
+                        </label>
+
+                        <label for="membershiplevel">Membership Level*</label>
+                        <div class="membership-options">
+                            <label class="radio-label"><input type="radio" name="membershiplevel" value="np" required> NP Membership (Non-Profit - No Fee)</label>
+                            <label class="radio-label"><input type="radio" name="membershiplevel" value="bronze"> Bronze Membership</label>
+                            <label class="radio-label"><input type="radio" name="membershiplevel" value="silver"> Silver Membership</label>
+                            <label class="radio-label"><input type="radio" name="membershiplevel" value="gold"> Gold Membership</label>
+                        </div>
+
+                        <label for="orgdesc">Business/Organization's Description
+                            <textarea id="orgdesc" name="orgdesc" title="Business/Organization's Description" rows="5"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Join the Chamber" class="submit-button">
+                </form>
+            </section>
+
+            <aside class="membership-info-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards-container">
+                    <div class="membership-card" id="card-np">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations.</p>
+                        <a href="#" class="modal-link" data-modal="modal-np">Learn More</a>
+                    </div>
+                    <div class="membership-card" id="card-bronze">
+                        <h3>Bronze Membership</h3>
+                        <p>Basic benefits for growing businesses.</p>
+                        <a href="#" class="modal-link" data-modal="modal-bronze">Learn More</a>
+                    </div>
+                    <div class="membership-card" id="card-silver">
+                        <h3>Silver Membership</h3>
+                        <p>Enhanced benefits and visibility.</p>
+                        <a href="#" class="modal-link" data-modal="modal-silver">Learn More</a>
+                    </div>
+                    <div class="membership-card" id="card-gold">
+                        <h3>Gold Membership</h3>
+                        <p>Premium benefits and maximum exposure.</p>
+                        <a href="#" class="modal-link" data-modal="modal-gold">Learn More</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div id="modal-np" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>NP Membership (Non-Profit)</h4>
+                <p><strong>Cost:</strong> No Fee</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li>Basic listing in the Chamber directory.</li>
+                    <li>Access to Chamber newsletters and communications.</li>
+                    <li>Networking opportunities at select events.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal-bronze" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Bronze Membership</h4>
+                <p><strong>Cost:</strong> $100/year (Example)</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li>All NP Membership benefits.</li>
+                    <li>Highlighted listing in the Chamber directory.</li>
+                    <li>One complimentary admission to a Chamber workshop or seminar.</li>
+                    <li>Discounted rates for Chamber events.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal-silver" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Silver Membership</h4>
+                <p><strong>Cost:</strong> $250/year (Example)</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li>All Bronze Membership benefits.</li>
+                    <li>Enhanced directory listing with logo.</li>
+                    <li>Two complimentary admissions to Chamber workshops or seminars.</li>
+                    <li>Opportunity to be featured in one newsletter per year.</li>
+                    <li>Small banner ad placement on a subpage of the Chamber website.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal-gold" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Gold Membership</h4>
+                <p><strong>Cost:</strong> $500/year (Example)</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li>All Silver Membership benefits.</li>
+                    <li>Premium directory listing (top placement, larger logo).</li>
+                    <li>Four complimentary admissions to Chamber workshops or seminars.</li>
+                    <li>Priority consideration for event sponsorships.</li>
+                    <li>Featured member spotlight on the homepage on a rotating basis.</li>
+                    <li>Medium banner ad placement on the Chamber website.</li>
+                    <li>Complimentary booth at one Chamber trade show or event per year.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content-wrapper">
+            <div>
+                <p><strong>Moab Chamber of Commerce</strong></p>
+                <p>123 Street, Moab, UT 84532</p>
+                <p>info@moabchamber.com</p>
+                <p>(801) 555-5555</p>
+            </div>
+            <div>
+                <p class="social-links-container">
+                    <a href="https://www.youtube.com/shorts/BhFVsSkwzeg"><img src="images/youtube.webp" alt="YouTube" width="48" height="48"></a>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=/moabhappenings"><img src="images/twitter.webp" alt="Twitter" width="48" height="48"></a>
+                    <a href="https://linkedin.com"><img src="images/linkedin.webp" alt="LinkedIn" width="48" height="48"></a>
+                </p>
+            </div>
+            <div>
+                <p>©<span id="currentYear"></span> Moab Chamber of Commerce</p>
+                <p>Sadler N. Kyne | WDD 231 Class Project</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

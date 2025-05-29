@@ -118,12 +118,12 @@ main h1 {
     margin-top: 0;
 }
 
-.filter-controls-directory { 
+.filter-controls-directory {
     margin-bottom: 1rem;
     display: flex;
     gap: 0.5rem;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 15px 1rem;
     border-bottom: 1px solid #eee;
 }
@@ -158,7 +158,7 @@ main h1 {
 }
 
 .filter-btn.active,
-.directory-controls button.active { 
+.directory-controls button.active {
     background-color: #333336;
     color: #ffffff;
     border-color: #333336;
@@ -202,7 +202,7 @@ footer .social-links-container img {
 
 .hero-directory {
     position: relative;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     background-color: #e0e0e0;
     min-height: 350px;
     display: flex;
@@ -213,15 +213,39 @@ footer .social-links-container img {
 
 .hero-directory img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 4px; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-.directory-controls { 
+.hero-directory .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #000000;
+    text-align: center;
+    width: 85%;
+    max-width: 480px;
+    padding: 1.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+.hero-directory .hero-text h1 {
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.directory-controls {
     display: flex;
-    justify-content: center; 
-    gap: 0.5rem; 
+    justify-content: center;
+    gap: 0.5rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0;
 }
@@ -230,30 +254,30 @@ footer .social-links-container img {
 }
 
 .member-card {
-    background-color: #ffffff; 
-    border: 1px solid #ddd;    
-    border-radius: 8px;        
-    padding: 1rem;             
-    margin-bottom: 1.5rem;       
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.member-card img { 
-    width: 160px; 
-    height: 120px; 
-    object-fit: cover; 
-    display: block;   
-    margin: 0 auto 0.75rem auto; 
-    border: 1px solid #eee; 
-    padding: 3px; 
+.member-card img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 0.75rem auto;
+    border: 1px solid #eee;
+    padding: 3px;
     border-radius: 4px;
 }
 .member-card h2 {
-    font-size: 1.4em; 
+    font-size: 1.4em;
     color: #000000;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .member-card p {
@@ -272,7 +296,7 @@ footer .social-links-container img {
 }
 
 .member-card p.website a {
-    color: #000000; 
+    color: #000000;
     text-decoration: underline;
     word-break: break-all;
 }
@@ -284,8 +308,8 @@ footer .social-links-container img {
 .member-card p.membership-level {
     font-size: 0.8em;
     font-style: italic;
-    color: #000000; 
-    text-align: center; 
+    color: #000000;
+    text-align: center;
     margin-top: 0.75rem;
 }
 
@@ -295,8 +319,8 @@ footer .social-links-container img {
 }
 nav ul li a.active {
     background-color: #f0f4f8;
-    color: #000000;           
-    font-weight: bold; 
+    color: #000000;
+    font-weight: bold;
 }
 
 .events-home {
@@ -355,7 +379,7 @@ nav ul li a.active {
     transform: translate(-50%, -50%);
     width: 85%;
     max-width: 480px;
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.5);
     color: #000000;
     padding: 1.5rem 1rem;
     border-radius: 6px;
@@ -433,7 +457,7 @@ nav ul li a.active {
     margin-top: 1.5rem;
     text-align: center;
 }
-#weather-forecast-area h3 { 
+#weather-forecast-area h3 {
     font-size: 1.3em;
     color: #333333;
     margin-bottom: 0.75rem;
@@ -446,7 +470,7 @@ nav ul li a.active {
     border-top: 3px solid #ccc;
     border-bottom: 3px solid #ccc;
     border-radius: 0px;
-    text-align: center; 
+    text-align: center;
 }
 #weather-forecast-area .forecast-day img {
     display: block;
@@ -456,10 +480,10 @@ nav ul li a.active {
     max-width: 40px;
 }
 .forecast-day .forecast-dayname {
-    font-weight: bold; 
-    font-size: 1.1em;    
+    font-weight: bold;
+    font-size: 1.1em;
     margin-bottom: 0.25rem;
-    color: #000000;       
+    color: #000000;
 }
 
 .spotlights-home {
@@ -477,12 +501,12 @@ nav ul li a.active {
     font-size: 1.8em;
 }
 .spotlight-member-card {
-    background-color: #ffffff; 
-    border: 1px solid #ddd;    
-    border-radius: 8px;        
-    padding: 1rem;             
-    margin-bottom: 1.5rem;       
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -500,11 +524,11 @@ nav ul li a.active {
     border-radius: 4px;
 }
 .spotlight-member-card h3 {
-    font-size: 1.4em; 
+    font-size: 1.4em;
     color: #000000;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    text-align: center; 
+    text-align: center;
 }
 .spotlight-member-card .website a {
     color: #004080;
@@ -522,4 +546,293 @@ nav ul li a.active {
     font-style: italic;
     color: #555555;
     margin-top: 0.5rem;
+}
+
+.join-page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.form-section {
+    order: 1;
+}
+
+.membership-info-section {
+    order: 2;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-top: 1.5rem;
+}
+
+.membership-info-section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#joinForm fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+}
+
+#joinForm legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0 0.5em;
+    color: #333;
+}
+
+#joinForm label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: normal;
+    color: #555;
+    font-size: 0.95em;
+}
+#joinForm label.radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    font-weight: normal;
+}
+#joinForm label.radio-label input[type="radio"] {
+    margin-right: 0.5em;
+    accent-color: #004080;
+    transform: scale(1.1);
+}
+
+#joinForm input[type="text"],
+#joinForm input[type="email"],
+#joinForm input[type="tel"],
+#joinForm textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-top: 0.25rem;
+}
+
+#joinForm input[type="text"]:focus,
+#joinForm input[type="email"]:focus,
+#joinForm input[type="tel"]:focus,
+#joinForm textarea:focus {
+    border-color: #004080;
+    box-shadow: 0 0 5px rgba(0, 64, 128, 0.3);
+    outline: none;
+}
+
+#joinForm textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+#joinForm .membership-options {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+}
+
+#joinForm .submit-button {
+    background-color: #B3FFB3;
+    color: #000000;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 1.05em;
+    display: block;
+    width: auto;
+    margin: 1rem auto 0 auto;
+}
+
+#joinForm .submit-button:hover,
+#joinForm .submit-button:focus {
+    background-color: #A3EEA3;
+    transform: scale(1.05);
+}
+
+.membership-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+div.membership-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+div.membership-card h3 {
+    margin-top: 0;
+    color: #004080;
+    font-size: 1.2em;
+}
+div.membership-card p {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 0.8rem;
+    min-height: 2.5em;
+}
+div.membership-card .modal-link {
+    display: inline-block;
+    background-color: #004080;
+    color: #fff;
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+}
+div.membership-card .modal-link:hover {
+    background-color: #002B55;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 20px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideInFromTop 0.4s ease-out;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h4 {
+    margin-top: 0;
+    color: #004080;
+    font-size: 1.3em;
+    margin-bottom: 0.8rem;
+}
+.modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.modal-content li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9em;
+}
+.modal-content p {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.thankyou-message {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin: 1rem 0;
+}
+.thankyou-message h1 {
+    color: #004080;
+    font-size: 1.6em;
+}
+.thankyou-message p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+.form-data-summary {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    margin: 1rem auto;
+    max-width: 100%;
+}
+.form-data-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+.form-data-summary li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 0.9em;
+}
+.form-data-summary li:last-child {
+    border-bottom: none;
+}
+.form-data-summary strong {
+    color: #333;
+}
+.thankyou-message .cta-button {
+    display: inline-block;
+    background-color: #B3FFB3;
+    color: #000000;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 0.8rem;
+    font-size: 1em;
+}
+.thankyou-message .cta-button:hover {
+    background-color: #A3EEA3;
+    transform: scale(1.05);
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
