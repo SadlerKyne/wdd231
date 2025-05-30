@@ -16,15 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         phone: "Mobile Phone Number",
         orgname: "Business/Organization's Name",
         timestamp: "Application Timestamp"
-        // Add other required fields here if needed, though instructions only specified these
     };
 
-    // Iterate over expected required fields
     for (const key in fieldLabels) {
         if (params.has(key)) {
             let value = params.get(key);
             if (key === "timestamp") {
-                // Format timestamp for better readability
                 const date = new Date(value);
                 value = date.toLocaleString();
             }

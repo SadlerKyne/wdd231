@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set the hidden timestamp field
     const timestampField = document.getElementById('timestamp');
     if (timestampField) {
         timestampField.value = new Date().toISOString();
     }
 
-    // Modal functionality
     const modalLinks = document.querySelectorAll('.modal-link');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close-button');
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close modal if background is clicked
     window.addEventListener('click', function(event) {
         modals.forEach(modal => {
             if (event.target == modal) {
@@ -36,15 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Membership card animation (simple fade-in example)
     const membershipCards = document.querySelectorAll('.membership-card');
     membershipCards.forEach((card, index) => {
         card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1 + 0.3}s forwards`;
-        card.style.opacity = 0; // Start transparent for animation
+        card.style.opacity = 0; 
     });
 });
 
-// Add a keyframe animation for fadeInUp if you don't have one globally
 const styleSheet = document.createElement("style");
 styleSheet.type = "text/css";
 styleSheet.innerText = `
