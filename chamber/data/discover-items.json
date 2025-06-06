@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Arches National Park",
+    "address": "Arches National Park Entrance Rd, Moab, UT 84532",
+    "description": "Home to over 2,000 natural sandstone arches, including the world-famous Delicate Arch. Offers numerous hiking trails and viewpoints.",
+    "imageFileName": "arches-park.webp"
+  },
+  {
+    "name": "Canyonlands National Park",
+    "address": "Grand View Point Rd, Moab, UT 84532",
+    "description": "Utah's largest national park, featuring dramatic desert landscapes carved by the Colorado River and its tributaries.",
+    "imageFileName": "canyonlands-park.webp"
+  },
+  {
+    "name": "Dead Horse Point State Park",
+    "address": "UT-313, Moab, UT 84532",
+    "description": "Offers breathtaking panoramic views of the Colorado River and Canyonlands National Park from 2,000 feet above.",
+    "imageFileName": "deadhorse-point.webp"
+  },
+  {
+    "name": "Delicate Arch Trail",
+    "address": "Arches National Park, Moab, UT 84532",
+    "description": "A popular 3-mile roundtrip hike leading to the iconic Delicate Arch, especially stunning at sunset.",
+    "imageFileName": "delicate_arch_hero.webp"
+  },
+  {
+    "name": "Slickrock Bike Trail",
+    "address": "Sand Flats Rd, Moab, UT 84532",
+    "description": "World-renowned challenging 10.5-mile loop trail for mountain biking over petrified sand dunes.",
+    "imageFileName": "slickrock-trail.webp"
+  },
+  {
+    "name": "Colorado River Rafting",
+    "address": "Various outfitters in Moab, UT 84532",
+    "description": "Experience thrilling whitewater rafting or scenic calm water floats through majestic canyons on the Colorado River.",
+    "imageFileName": "river-rafting.webp"
+  },
+  {
+    "name": "Hell's Revenge 4x4 Trail",
+    "address": "Sand Flats Recreation Area, Moab, UT 84532",
+    "description": "An iconic and challenging off-road trail for 4x4 vehicles and UTVs, known for its steep climbs and descents on slickrock.",
+    "imageFileName": "hells-revenge.webp"
+  },
+  {
+    "name": "Corona Arch Trail",
+    "address": "Potash Rd (UT-279), Moab, UT 84532",
+    "description": "A moderate 3-mile roundtrip hike to the impressive Corona Arch and nearby Bowtie Arch.",
+    "imageFileName": "corona-arch.webp"
+  }
+]

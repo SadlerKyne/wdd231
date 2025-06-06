@@ -1,0 +1,215 @@
+/* styles/discover.css */
+
+.discover-main .content-wrapper {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    grid-template-areas:
+        "h1"
+        "visitor-message"
+        "attractions";
+}
+
+.discover-main h1 {
+    grid-area: h1;
+}
+
+.visitor-message-container {
+    grid-area: visitor-message;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.visitor-message-container p {
+    margin: 0;
+}
+
+.visitor-message-container h2,
+#attraction-glossary-list {
+    display: none;
+}
+
+
+#attraction-cards-container {
+    grid-area: attractions;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.attraction-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attraction-card h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.attraction-card figure {
+    margin: 0 auto 1rem auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease; 
+}
+
+.attraction-card address {
+    font-style: normal;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.attraction-card p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #000000;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.attraction-card button {
+    background-color: #B3FFB3;
+    color: #000000;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attraction-card button:hover {
+    background-color: #A3EEA3;
+}
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-main .content-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "h1"
+            "visitor-message"
+            "attractions";
+    }
+
+    .visitor-message-container {
+        padding: 1.5rem;
+        font-size: 1.0em;
+        align-self: start;
+    }
+
+    .visitor-message-container h2,
+    #attraction-glossary-list {
+        display: none;
+    }
+
+    #attraction-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    }
+
+    .attraction-card {
+        scroll-margin-top: 70px;
+    }
+
+    .attraction-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-main .content-wrapper {
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+            "h1 h1"
+            "visitor-message attractions";
+    }
+
+    .visitor-message-container {
+        padding: 2rem;
+        font-size: 1.1em;
+        align-self: start;
+        text-align: left;
+        position: sticky;
+        top: 70px;
+        height: fit-content;
+    }
+
+    .visitor-message-container h2,
+    #attraction-glossary-list {
+        display: block;
+    }
+
+    .visitor-message-container h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.3em;
+        color: #000000;
+        text-align: center;
+    }
+
+    #attraction-glossary-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #attraction-glossary-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    #attraction-glossary-list li a {
+        display: block;
+        padding: 0.3em 0.5em;
+        text-decoration: none;
+        color: #004080;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+        font-size: 0.95em;
+    }
+
+    #attraction-glossary-list li a:hover,
+    #attraction-glossary-list li a:focus {
+        background-color: #f0f4f8;
+        text-decoration: underline;
+    }
+
+    #attraction-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+
+    .attraction-card {
+        scroll-margin-top: 70px;
+    }
+
+    .attraction-card img:hover {
+        transform: scale(1.05) rotate(1deg);
+        filter: grayscale(20%);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+}
