@@ -1,0 +1,23 @@
+{
+    "orders": [
+      {
+        "orderId": "ORD-2025-001",
+        "date": "2025-05-15",
+        "total": "140.00",
+        "status": "Delivered"
+      },
+      {
+        "orderId": "ORD-2025-002",
+        "date": "2025-06-01",
+        "total": "75.00",
+        "status": "Processing"
+      }
+    ],
+    "projects": [
+      {
+          "projectId": "PROJ-A45",
+          "projectName": "Custom Housing",
+          "status": "In Progress"
+      }
+    ]
+  }

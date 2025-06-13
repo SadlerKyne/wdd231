@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KynesDesign - Login</title>
+    <meta name="description" content="Log in to your KynesDesign account to manage your products, services, and orders.">
+    <meta name="author" content="Sadler N. Kyne">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Login - KynesDesign">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Log in to your KynesDesign account.">
+    <meta property="og:image" content="https://SadlerKyne.github.io/wdd231/final_project/images/og-login.png">
+    <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/final_project/login.html">
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/login.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content-wrapper">
+            <img src="images/site-plan.webp" alt="KynesDesign Logo" id="siteLogo">
+            <div class="site-title">KynesDesign</div>
+        </div>
+        <nav>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+            <ul id="primaryNav" class="hide-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="login.html">Login</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+            <a href="index.html#product-display" class="cta-nav-button">Order now</a>
+        </nav>
+    </header>
+    <main class="login-main">
+        <form class="login-form">
+            <h1>Log In</h1>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Log In</button>
+            <div class="form-links">
+                <a href="#">Don't have an account?</a>
+                <a href="#">Reset Password</a>
+            </div>
+            <div class="separator">
+                <span>- or -</span>
+            </div>
+            <button type="button" class="social-login">Log in with Odoo.com</button>
+        </form>
+    </main>
+    <footer>
+        <div class="content-wrapper">
+            <p>&copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America</p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.webp" alt="Instagram"></a>
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

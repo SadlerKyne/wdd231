@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KynesDesign - Form Submission</title>
+    <meta name="description" content="Form submission confirmation page for KynesDesign.">
+    <meta name="author" content="Sadler N. Kyne">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/form-submission.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content-wrapper">
+            <img src="images/site-plan.webp" alt="KynesDesign Logo" id="siteLogo">
+            <div class="site-title">KynesDesign</div>
+        </div>
+        
+        <nav>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+            <ul id="primaryNav" class="hide-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+            <a href="index.html#product-display" class="cta-nav-button">Order now</a>
+        </nav>
+    </header>
+
+    <main class="submission-main">
+        <h1>Form Data Received</h1>
+        <div id="formDataDisplay">
+            <p>Loading submitted data...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content-wrapper">
+            <p>&copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America</p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.webp" alt="Instagram"></a>
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

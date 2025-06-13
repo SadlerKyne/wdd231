@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KynesDesign - My Account</title>
+    <meta name="description" content="Manage your KynesDesign account, view orders, and update your information.">
+    <meta name="author" content="Sadler N. Kyne">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="My Account - KynesDesign">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Manage your KynesDesign account.">
+    <meta property="og:image" content="https://SadlerKyne.github.io/wdd231/final_project/images/og-account.png">
+    <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/final_project/account.html">
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/account.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content-wrapper">
+            <img src="images/site-plan.webp" alt="KynesDesign Logo" id="siteLogo">
+            <div class="site-title">KynesDesign</div>
+        </div>
+        <nav>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+            <ul id="primaryNav" class="hide-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="account.html">My Account</a></li>
+            </ul>
+            <a href="index.html#product-display" class="cta-nav-button">Order now</a>
+        </nav>
+    </header>
+    <main class="account-main">
+        <h1>My Account</h1>
+        <p class="dashboard-summary">You have <span id="liked-count">0</span> favorited items.</p>
+        <div class="account-dashboard">
+            <div class="dashboard-grid">
+                <a href="#" class="dashboard-item dashboard-item-dynamic" id="sales-orders-item">
+                    <h4>Sales Orders</h4>
+                    <p></p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Your Invoices</h4>
+                    <p>Follow, download, or pay your invoices</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Payment methods</h4>
+                    <p>Manage your payment methods</p>
+                </a>
+                <a href="#" class="dashboard-item dashboard-item-dynamic" id="projects-item">
+                    <h4>Projects</h4>
+                    <p></p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Tasks</h4>
+                    <p>Follow and comments tasks of your projects</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Timesheets</h4>
+                    <p>Review all timesheets related to your projects</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Tickets</h4>
+                    <p>Follow all your helpdesk tickets</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Requests for Quotation</h4>
+                    <p>Follow your Requests for Quotation</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Our Orders</h4>
+                    <p>Follow orders you have to fulfill</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Addresses</h4>
+                    <p>Add, remove or modify your addresses</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Connection & Security</h4>
+                    <p>Configure your connection parameters</p>
+                </a>
+                <a href="#" class="dashboard-item">
+                    <h4>Knowledge</h4>
+                    <p>Find all articles shared with you</p>
+                </a>
+            </div>
+            <aside class="dashboard-sidebar">
+                <div class="contact-info">
+                    <img src="images/profile-pic.jpeg" alt="User profile picture" class="profile-pic">
+                    <h4>Mitchell Admin</h4>
+                    <p>Your Company</p>
+                    <p>215 Vine St<br>Scranton PA 18503<br>United States</p>
+                    <p>1 555-555-5555</p>
+                    <p>admin@yourcompany.example.com</p>
+                    <a href="#" class="edit-link">Edit Information</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="content-wrapper">
+            <p>&copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com"><img src="images/facebook.webp" alt="Facebook"></a>
+                <a href="twitter.com"><img src="images/twitter.webp" alt="Twitter"></a>
+                <a href="instagram.com"><img src="images/instagram.webp" alt="Instagram"></a>
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

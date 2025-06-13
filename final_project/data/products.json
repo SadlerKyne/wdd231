@@ -1,0 +1,74 @@
+[
+  {
+    "id": "prod001",
+    "name": "Custom Keycap",
+    "price": "15.00",
+    "category": "Popular",
+    "imageUrl": "images/keycap.webp",
+    "tag": "3D Print",
+    "description": "A fully customized, 3D printed keycap for mechanical keyboards. Made with durable resin and available in multiple colors. Perfect for personalizing your setup."
+  },
+  {
+    "id": "prod002",
+    "name": "Mechanical Part",
+    "price": "125.00",
+    "category": "Popular",
+    "imageUrl": "images/chipset.webp",
+    "tag": "CAD",
+    "description": "A precision-engineered mechanical part designed via CAD for industrial applications. Built for high performance and durability. Contact for material specifications."
+  },
+  {
+    "id": "prod003",
+    "name": "Bolt Action",
+    "price": "25.00",
+    "category": "Kid Friendly",
+    "imageUrl": "images/bolt.webp",
+    "tag": "Art",
+    "description": "A fun, artistic bolt-action mechanism model. Great for hobbyists and as a unique desktop toy. Non-functional, for display only."
+  },
+  {
+    "id": "prod004",
+    "name": "Architectural Model",
+    "price": "350.00",
+    "category": "Members Area",
+    "imageUrl": "images/support.webp",
+    "tag": "Pro",
+    "description": "A detailed scale model of an architectural design, perfect for presentations and client showcases. Created using high-detail 3D printing and finishing techniques."
+  },
+  {
+    "id": "prod005",
+    "name": "Lego Design",
+    "price": "200.00",
+    "category": "New Designs",
+    "imageUrl": "images/lego.webp",
+    "tag": "Service",
+    "description": "A custom design service for unique Lego creations. From complex models to personalized figures, our designers can build anything you can imagine."
+  },
+  {
+    "id": "prod006",
+    "name": "Phone Stand",
+    "price": "12.00",
+    "category": "Popular",
+    "imageUrl": "images/phone.webp",
+    "tag": "3D Print",
+    "description": "A sleek and modern 3D printed phone stand. Holds your phone vertically or horizontally. Available in a variety of colors to match your desk setup."
+  },
+  {
+    "id": "prod007",
+    "name": "Engineering Consult",
+    "price": "75.00",
+    "category": "Members Area",
+    "imageUrl": "images/crank.webp",
+    "tag": "Service",
+    "description": "A one-hour consultation with one of our experienced design engineers to discuss your project, review schematics, and plan your next steps."
+  },
+  {
+    "id": "prod008",
+    "name": "Custom Coaster Set",
+    "price": "30.00",
+    "category": "New Designs",
+    "imageUrl": "images/coaster.webp",
+    "tag": "Art",
+    "description": "A set of four custom-designed and 3D printed coasters. Add your own logo, text, or pattern. A perfect personalized gift or addition to your home."
+  }
+]
