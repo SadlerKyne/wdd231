@@ -27,7 +27,7 @@
 .login-form input {
     padding: 0.75rem;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     font-family: 'Arimo', sans-serif;
     font-size: 1em;
 }
@@ -54,9 +54,9 @@
 .separator {
     text-align: center;
     margin: 1rem 0;
-    color: #888;
+    color: #555555;
 }
 .social-login {
     background-color: #f0f0f0;
-    color: #333;
+    color: #333336;
 }

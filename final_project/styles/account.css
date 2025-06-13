@@ -25,7 +25,7 @@
     border-radius: 8px;
     padding: 1.5rem;
     text-decoration: none;
-    color: #333;
+    color: #333336;
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
     position: relative;
 }
@@ -43,7 +43,7 @@
     line-height: 1.5;
 }
 .dashboard-item-dynamic {
-    border-color: #004080;
+    border-color: #333336;
     border-width: 2px;
 }
 .dashboard-item-dynamic::before {
@@ -86,14 +86,11 @@
     text-align: center;
     margin-top: 1rem;
     font-weight: 700;
-    color: #004080;
+    color: #333336;
 }
 @media (min-width: 601px) {
     .account-dashboard {
-        display: grid;
         grid-template-columns: 3fr 1fr;
-        gap: 2rem;
-        align-items: start;
     }
     .dashboard-grid {
         grid-template-columns: 1fr 1fr;

@@ -18,8 +18,8 @@
     <meta property="og:description" content="KynesDesign is your destination for unique, custom-made products and expert freelance design services.">
     <meta property="og:image" content="https://SadlerKyne.github.io/wdd231/final_project/images/og-home.webp">
     <meta property="og:url" content="https://SadlerKyne.github.io/wdd231/final_project/index.html">
-    <script src="scripts/main.js" type="module"></script>
-    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -49,7 +49,7 @@
                 <img src="images/hero.webp" alt="A compelling visual representing KynesDesign's services or products.">
             </div>
         </section>
-        <section id="search-tool">
+        <section id="search-tool" class="card">
             <form class="search-form">
                 <div class="search-options">
                     <div class="radio-group">
@@ -118,28 +118,28 @@
                 <button type="submit" class="search-button">Search</button>
             </form>
         </section>
-        <section id="how-it-works">
+        <section id="how-it-works" class="page-section">
             <h2>How It Works</h2>
             <p class="section-subtitle">With our quick and easy process, we guarantee a smooth workflow from the time you open the PO to the time you receive your render or design.</p>
             <div class="process-steps">
                 <div class="step">
-                    <img src="images/form.webp" alt="Form icon">
+                    <img src="images/form.webp" alt="Form icon" loading="lazy">
                     <h3>Fill out the custom order form</h3>
                     <p>You will fill out an order form with as much information as you can. If you have schematics and a BOM, upload them so our engineers have a detailed image of what you are wanting.</p>
                 </div>
                 <div class="step">
-                    <img src="images/consultation.webp" alt="Consultation icon">
+                    <img src="images/consultation.webp" alt="Consultation icon" loading="lazy">
                     <h3>Book a consult</h3>
                     <p>You are going to book a date and time for a one-on-one with our world-class engineers who will make sure they understand exactly what you are wanting. They will speak your language because we have engineers from most any field.</p>
                 </div>
                 <div class="step">
-                    <img src="images/receive.webp" alt="Receive design icon">
+                    <img src="images/receive.webp" alt="Receive design icon" loading="lazy">
                     <h3>Receive your design</h3>
                     <p>Depending on the depth of the project, you will receive your design in 7 to 20 days. This will be gone over in your initial sprint plan and again in any follow-ups.</p>
                 </div>
             </div>
         </section>
-        <section id="product-display">
+        <section id="product-display" class="page-section">
             <h2>In Stock Designs</h2>
             <p class="section-subtitle">These are designs that are not proprietary or that we have bought the rights to because we know it's something that can help the hard worker like you who needs parts fast.</p>
             <div class="product-tabs">
@@ -151,27 +151,27 @@
             <div class="display-grid">
             </div>
         </section>
-        <section id="features">
+        <section id="features" class="page-section">
             <div class="features-content">
                 <h2>We Guarantee Our Brand</h2>
                 <p class="section-subtitle">Most companies only guarantee their product. Not us. We guarantee our brand. What this means is, if you aren't happy for any reason through the process, we will make it right. Customers are our most valuable asset and we know how to treat them right.</p>
                 <ul class="feature-list">
                     <li>
-                        <img src="images/cxs.webp" alt="Customer Support Icon">
+                        <img src="images/cxs.webp" alt="Customer Support Icon" loading="lazy">
                         <div>
                             <h4>Customer Support</h4>
                             <p>Customer support is available 24/7 in the USA.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="images/price.webp" alt="Best Price Icon">
+                        <img src="images/price.webp" alt="Best Price Icon" loading="lazy">
                         <div>
                             <h4>Best Price Guaranteed</h4>
                             <p>If you can find someone who will match our price and time, you can have the product for free.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="images/ship.webp" alt="Fast Shipping Icon">
+                        <img src="images/ship.webp" alt="Fast Shipping Icon" loading="lazy">
                         <div>
                             <h4>Fast Shipping</h4>
                             <p>We ship products in 7 to 20 days, which is half the time of other design brands. As soon as you approve the render, we start cutting or printing your design. No delay!</p>
@@ -180,22 +180,22 @@
                 </ul>
             </div>
             <div class="features-image">
-                <img src="images/cad.webp" alt="A large image highlighting a key feature or product.">
+                <img src="images/cad.webp" alt="A large image highlighting a key feature or product." loading="lazy">
             </div>
         </section>
-        <section id="image-gallery">
+        <section id="image-gallery" class="page-section">
             <div class="gallery-item">
-                <img src="images/plane.webp" alt="Gallery image 1">
+                <img src="images/plane.webp" alt="Gallery image 1" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="images/mech.webp" alt="Gallery image 2">
+                <img src="images/mech.webp" alt="Gallery image 2" loading="lazy">
             </div>
         </section>
-        <section id="testimonials">
+        <section id="testimonials" class="page-section">
             <h2>Trusted by Thousands of Happy Customers</h2>
             <p class="section-subtitle">True grit customers just like you, hear what they have to say.</p>
             <div class="testimonial-cards">
-                <div class="testimonial-card">
+                <div class="testimonial-card card">
                     <div class="card-top">
                         <div class="customer-info">
                             <p class="customer-name">John Robert</p>
@@ -205,7 +205,7 @@
                     </div>
                     <p class="quote">"Wow... I am very happy to use this. It turned out to be more than my expectations and so far there have been no problems."</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card card">
                     <div class="card-top">
                         <div class="customer-info">
                             <p class="customer-name">John Robert</p>
@@ -215,7 +215,7 @@
                     </div>
                     <p class="quote">"Wow... I am very happy to use this. It turned out to be more than my expectations and so far there have been no problems."</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card card">
                     <div class="card-top">
                         <div class="customer-info">
                             <p class="customer-name">Robert</p>
@@ -227,21 +227,14 @@
                 </div>
             </div>
         </section>
-        <div id="detailModal" class="modal">
-            <div class="modal-content">
-                <span class="modal-close">&times;</span>
-                <div id="modal-body">
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         <div class="content-wrapper">
             <p>&copy;<span id="currentYear"></span> Sadler N. Kyne - United States of America</p>
             <div class="social-links">
-                <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram.webp" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.webp" alt="Facebook" loading="lazy"></a>
+                <a href="#"><img src="images/twitter.webp" alt="Twitter" loading="lazy"></a>
+                <a href="#"><img src="images/instagram.webp" alt="Instagram" loading="lazy"></a>
             </div>
             <p id="lastModified"></p>
         </div>
