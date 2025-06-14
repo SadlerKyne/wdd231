@@ -31,10 +31,12 @@ h2 {
 p {
     margin: 0 0 1rem 0;
 }
-header {
+header, .card-top, .search-options, .radio-group, .feature-list li, .social-links, .header-content-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+header {
+    justify-content: space-between;
     padding: 1rem;
     background-color: var(--background-card);
     border-bottom: 1px solid var(--border-color);
@@ -43,8 +45,6 @@ header {
     z-index: 1000;
 }
 .header-content-wrapper {
-    display: flex;
-    align-items: center;
     gap: 15px;
 }
 #siteLogo {
@@ -133,7 +133,6 @@ footer p {
 }
 .social-links {
     margin: 1rem 0;
-    display: flex;
     justify-content: center;
     gap: 1rem;
 }
@@ -222,25 +221,20 @@ footer p {
     z-index: 10;
     border: 2px solid var(--heading-text);
 }
-.search-form {
+.search-form, .search-filters, .filter-set {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
-.search-options,
-.radio-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.search-form {
+    gap: 1.5rem;
 }
 .search-options {
     gap: 1.5rem;
     flex-wrap: wrap;
 }
-.search-filters, .filter-set {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.radio-group {
+    gap: 0.5rem;
 }
 #customBuildFilters {
     display: none;
@@ -261,7 +255,7 @@ footer p {
     font-family: 'Arimo', sans-serif;
     font-size: 1em;
 }
-.search-button {
+.search-button, .login-form button[type="submit"] {
     background-color: var(--primary-accent);
     color: var(--background-card);
     font-weight: 700;
@@ -346,7 +340,7 @@ footer p {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--border-color);
+    color: var(--primary-text);
 }
 .like-button.liked {
     color: var(--like-color);
@@ -373,8 +367,6 @@ footer p {
     margin-top: 2rem;
 }
 .feature-list li {
-    display: flex;
-    align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -395,9 +387,7 @@ footer p {
     border: 2px solid var(--border-color);
 }
 .card-top {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 1rem;
 }
 .customer-info .customer-name {
@@ -575,6 +565,8 @@ footer p {
         width: auto;
         background-color: transparent;
         box-shadow: none;
+        top: unset;
+        right: unset;
     }
     nav ul li a {
         color: var(--primary-accent);
