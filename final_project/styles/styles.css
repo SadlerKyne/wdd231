@@ -34,6 +34,11 @@ header, .search-options, .radio-group, .feature-list li, .social-links {
     display: flex;
     align-items: center;
 }
+.search-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Add this line */
+}
 header {
     justify-content: space-between;
     padding: 1rem;
@@ -178,10 +183,13 @@ footer p {
     text-decoration: none;
 }
 #hero {
-    text-align: center;
-    padding: 2rem 0;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 2rem 3rem;
     background-color: var(--background-card);
+    gap: 3rem;
 }
+
 .hero-label {
     font-size: 0.9em;
     font-weight: 700;
@@ -511,6 +519,33 @@ footer p {
     font-weight: 700;
     color: var(--primary-text);
 }
+.header-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filter-set {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+}
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
 @media (min-width: 700px) {
     header, main, footer .content-wrapper {
         padding-left: 2rem;
@@ -629,5 +664,17 @@ footer p {
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+    }
+    .filter-set {
+        flex-direction: row;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .process-steps {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .testimonial-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
