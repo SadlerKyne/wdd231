@@ -4,7 +4,7 @@
     --background-main: #f5f5f7;
     --background-card: #ffffff;
     --primary-accent: #333336;
-    --secondary-accent: #b3ffb3;
+    --secondary-accent: #99e699;
     --subtle-gray: #f0f0f0;
     --border-color: #e0e0e0;
     --like-color: #ff4d4d;
@@ -30,7 +30,7 @@ main h1 {
     margin-bottom: 1.5rem;
     text-align: center;
 }
-header, .card-top, .search-options, .radio-group, .feature-list li, .social-links, .header-content-wrapper {
+header, .search-options, .radio-group, .feature-list li, .social-links {
     display: flex;
     align-items: center;
 }
@@ -43,7 +43,9 @@ header {
     top: 0;
     z-index: 1000;
 }
-.header-content-wrapper {
+.flex-align {
+    display: flex;
+    align-items: center;
     gap: 15px;
 }
 #siteLogo {
@@ -75,7 +77,7 @@ nav ul {
     width: 200px;
     z-index: 100;
 }
-nav ul li a {
+nav ul a {
     display: block;
     padding: 1rem;
     text-decoration: none;
@@ -87,7 +89,7 @@ nav ul li.active a {
     background-color: var(--heading-text);
     font-weight: bold;
 }
-nav ul li a:hover {
+nav ul a:hover {
     background-color: #555555;
 }
 .hide-menu {
@@ -220,20 +222,13 @@ footer p {
     z-index: 10;
     border: 2px solid var(--heading-text);
 }
-.search-form, .search-filters, .filter-set {
+.flex-column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 .search-form {
     gap: 1.5rem;
-}
-.search-options {
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-.radio-group {
-    gap: 0.5rem;
 }
 #customBuildFilters {
     display: none;
@@ -247,7 +242,7 @@ footer p {
     font-size: 0.9em;
     margin-bottom: 0.25rem;
 }
-.filter-group select, .search-button, .login-form input {
+.filter-group select, .login-form input, textarea {
     padding: 0.75rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
@@ -260,12 +255,19 @@ footer p {
     font-weight: 700;
     cursor: pointer;
     border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+.login-form button[type="submit"] {
+    padding: 0.8rem;
+    font-size: 1.1em;
+    margin-top: 1.5rem;
 }
 #how-it-works {
     background-color: var(--background-main);
     text-align: center;
 }
-.process-steps, .testimonial-cards {
+.flex-grid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -307,11 +309,10 @@ footer p {
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
-.product-card {
+.card--product {
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.product-card:hover {
+.card--product:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -365,10 +366,6 @@ footer p {
     padding: 0;
     margin-top: 2rem;
 }
-.feature-list li {
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
 .feature-list img {
     height: 40px;
 }
@@ -384,10 +381,6 @@ footer p {
 }
 .testimonial-card {
     border: 2px solid var(--border-color);
-}
-.card-top {
-    justify-content: space-between;
-    margin-bottom: 1rem;
 }
 .customer-info .customer-name {
     font-weight: 700;
@@ -439,16 +432,6 @@ footer p {
     margin-top: 1rem;
     margin-bottom: 0.25rem;
 }
-.login-form button {
-    padding: 0.8rem;
-    border-radius: 6px;
-    border: none;
-    font-family: 'Arimo', sans-serif;
-    font-size: 1.1em;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 1.5rem;
-}
 .form-links {
     display: flex;
     justify-content: space-between;
@@ -480,34 +463,14 @@ footer p {
     flex-direction: column;
     gap: 1.5rem;
 }
-.dashboard-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-.dashboard-item {
-    text-decoration: none;
-    color: var(--primary-text);
+.card--dashboard {
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-    position: relative;
 }
-.dashboard-item:hover {
+.card--dashboard:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.dashboard-item h4 {
-    margin: 0 0 0.5rem 0;
-}
-.dashboard-item p {
-    margin: 0;
-    font-size: 0.9em;
-    line-height: 1.5;
-}
-.dashboard-item-dynamic {
-    border-color: #333336;
-    border-width: 2px;
-}
-.dashboard-item-dynamic::before {
+.card--dashboard[data-dynamic="true"]::before {
     content: 'Live Data';
     position: absolute;
     top: 10px;
@@ -518,6 +481,14 @@ footer p {
     color: #000000;
     padding: 3px 8px;
     border-radius: 10px;
+}
+.dashboard-item h4 {
+    margin: 0 0 0.5rem 0;
+}
+.dashboard-item p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
 }
 .dashboard-sidebar {
     padding: 1.5rem;
@@ -563,12 +534,12 @@ footer p {
         top: unset;
         right: unset;
     }
-    nav ul li a {
+    nav ul a {
         color: var(--primary-accent);
         border: none;
         padding: 0.5rem 1rem;
     }
-    nav ul li a:hover, nav ul li.active a:hover {
+    nav ul a:hover, nav ul li.active a:hover {
         background-color: var(--subtle-gray);
     }
     nav ul li.active a {
@@ -591,19 +562,21 @@ footer p {
     main h1 {
         text-align: left;
     }
-    #hero {
+    #hero, #image-gallery, #modal-body {
         display: grid;
+    }
+    #hero {
         grid-template-columns: 1fr 1fr;
         text-align: left;
     }
-    #search-tool.card {
-        max-width: 1100px;
+    #image-gallery {
+        grid-template-columns: 1fr 1fr;
+        }
+    #modal-body {
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
     }
-    .search-form {
-        flex-direction: row;
-        align-items: flex-end;
-    }
-    .search-filters, .filter-set {
+    .flex-column {
         flex-direction: row;
         align-items: flex-end;
     }
@@ -611,13 +584,10 @@ footer p {
         flex-wrap: wrap;
         flex-grow: 1;
     }
-    .filter-set {
-        flex-grow: 1;
-    }
     .filter-group {
         flex: 1 1 150px;
     }
-    .process-steps {
+    .flex-grid {
         flex-direction: row;
     }
     .step:not(:last-child)::after {
@@ -643,14 +613,6 @@ footer p {
     }
     .features-image {
         order: 1;
-    }
-    #image-gallery, .testimonial-cards {
-        flex-direction: row;
-    }
-    #modal-body {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: 2rem;
     }
     .account-dashboard {
         display: grid;
