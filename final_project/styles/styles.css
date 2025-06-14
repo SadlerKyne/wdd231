@@ -18,18 +18,17 @@ body {
 h1, h2, h3, h4 {
     color: var(--heading-text);
 }
-h1, h2 {
-    text-align: center;
-}
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 1.5rem;
-}
 h2 {
+    text-align: center;
     font-size: 1.8em;
 }
 p {
     margin: 0 0 1rem 0;
+}
+main h1 {
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 header, .card-top, .search-options, .radio-group, .feature-list li, .social-links, .header-content-wrapper {
     display: flex;
@@ -450,10 +449,6 @@ footer p {
     cursor: pointer;
     margin-top: 1.5rem;
 }
-.login-form button[type="submit"] {
-    background-color: #333336;
-    color: #ffffff;
-}
 .form-links {
     display: flex;
     justify-content: space-between;
@@ -593,7 +588,7 @@ footer p {
         max-width: 1200px;
         margin: 0 auto;
     }
-    h1 {
+    main h1 {
         text-align: left;
     }
     #hero {
