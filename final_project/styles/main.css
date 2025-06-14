@@ -214,6 +214,16 @@ footer p {
 .modal-product-details {
     min-width: 0;
 }
+
+.login-form input,
+.filter-group select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+}
+
 @media (min-width: 601px) {
     header {
         padding: 1rem 2rem;
