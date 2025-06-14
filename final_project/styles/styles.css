@@ -31,12 +31,10 @@ h2 {
 p {
     margin: 0 0 1rem 0;
 }
-header, .card-top, .search-options, .radio-group, .feature-list li, .social-links, .header-content-wrapper {
-    display: flex;
-    align-items: center;
-}
 header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     background-color: var(--background-card);
     border-bottom: 1px solid var(--border-color);
@@ -45,6 +43,8 @@ header {
     z-index: 1000;
 }
 .header-content-wrapper {
+    display: flex;
+    align-items: center;
     gap: 15px;
 }
 #siteLogo {
@@ -133,6 +133,7 @@ footer p {
 }
 .social-links {
     margin: 1rem 0;
+    display: flex;
     justify-content: center;
     gap: 1rem;
 }
@@ -181,6 +182,12 @@ footer p {
     padding: 2rem 0;
     background-color: var(--background-card);
 }
+.hero-label {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+}
 .hero-content h1 {
     font-size: 2.2em;
     text-align: center;
@@ -215,20 +222,25 @@ footer p {
     z-index: 10;
     border: 2px solid var(--heading-text);
 }
-.search-form, .search-filters, .filter-set {
+.search-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-.search-form {
     gap: 1.5rem;
+}
+.search-options,
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .search-options {
     gap: 1.5rem;
     flex-wrap: wrap;
 }
-.radio-group {
-    gap: 0.5rem;
+.search-filters, .filter-set {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 #customBuildFilters {
     display: none;
@@ -249,7 +261,7 @@ footer p {
     font-family: 'Arimo', sans-serif;
     font-size: 1em;
 }
-.search-button, .login-form button[type="submit"] {
+.search-button {
     background-color: var(--primary-accent);
     color: var(--background-card);
     font-weight: 700;
@@ -361,6 +373,8 @@ footer p {
     margin-top: 2rem;
 }
 .feature-list li {
+    display: flex;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -381,8 +395,18 @@ footer p {
     border: 2px solid var(--border-color);
 }
 .card-top {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
+}
+.customer-info .customer-name {
+    font-weight: 700;
+    margin: 0;
+}
+.customer-info .customer-location {
+    font-size: 0.9em;
+    margin: 0;
 }
 .rating {
     font-weight: 700;
@@ -435,6 +459,10 @@ footer p {
     font-weight: 700;
     cursor: pointer;
     margin-top: 1.5rem;
+}
+.login-form button[type="submit"] {
+    background-color: #333336;
+    color: #ffffff;
 }
 .form-links {
     display: flex;
@@ -622,6 +650,12 @@ footer p {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: left;
+    }
+    .features-content {
+        order: 2;
+    }
+    .features-image {
+        order: 1;
     }
     #image-gallery, .testimonial-cards {
         flex-direction: row;
