@@ -70,5 +70,77 @@
     "imageUrl": "images/coaster.webp",
     "tag": "Art",
     "description": "A set of four custom-designed and 3D printed coasters. Add your own logo, text, or pattern. A perfect personalized gift or addition to your home."
+  },
+  {
+    "id": "prod009",
+    "name": "Drone Chassis",
+    "price": "85.00",
+    "category": "Popular",
+    "imageUrl": "images/chassis.webp",
+    "tag": "CAD",
+    "description": "A lightweight and durable drone chassis, designed for FPV racing. Optimized for strength and aerodynamics. Carbon fiber material."
+  },
+  {
+    "id": "prod010",
+    "name": "Miniature Figurine",
+    "price": "20.00",
+    "category": "Kid Friendly",
+    "imageUrl": "images/figurine.webp",
+    "tag": "Art",
+    "description": "A custom tabletop gaming miniature. Provide your character description and we will design and print a high-detail figure for your campaign."
+  },
+  {
+    "id": "prod011",
+    "name": "Product Prototyping",
+    "price": "500.00",
+    "category": "Members Area",
+    "imageUrl": "images/prototype.webp",
+    "tag": "Pro",
+    "description": "Full product prototyping service. From initial concept sketch to a functional, 3D printed prototype. Includes two design revision rounds."
+  },
+  {
+    "id": "prod012",
+    "name": "Desk Organizer",
+    "price": "45.00",
+    "category": "New Designs",
+    "imageUrl": "images/organizer.webp",
+    "tag": "3D Print",
+    "description": "A modular desk organizer system. Includes a pen holder, phone stand, and tray. Customize the layout to fit your needs."
+  },
+  {
+    "id": "prod013",
+    "name": "Custom Jewelry",
+    "price": "150.00",
+    "category": "New Designs",
+    "imageUrl": "images/jewelry.webp",
+    "tag": "Art",
+    "description": "Design a unique piece of jewelry. Work with our artists to create a custom pendant, ring, or earrings, brought to life with 3D printing."
+  },
+  {
+    "id": "prod014",
+    "name": "RC Car Parts",
+    "price": "18.00",
+    "category": "Popular",
+    "imageUrl": "images/rc-parts.webp",
+    "tag": "CAD",
+    "description": "Durable, custom-designed parts for your RC car. Bumpers, suspension arms, and more. Stronger than stock parts."
+  },
+  {
+    "id": "prod015",
+    "name": "3D Scan Service",
+    "price": "120.00",
+    "category": "Members Area",
+    "imageUrl": "images/3d-scan.webp",
+    "tag": "Service",
+    "description": "High-resolution 3D scanning service. We can scan your object and provide a detailed 3D model for replication or modification."
+  },
+  {
+    "id": "prod016",
+    "name": "Cookie Cutter Set",
+    "price": "22.00",
+    "category": "Kid Friendly",
+    "imageUrl": "images/cookie-cutter.webp",
+    "tag": "3D Print",
+    "description": "A set of 5 custom-themed cookie cutters. Perfect for parties and baking with family. Food-safe PLA plastic."
   }
 ]
